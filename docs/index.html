@@ -249,7 +249,7 @@ function renderLista(lista) {
     html += `<article class="card" style="--c:${cor}">
       <div class="chips">${chips}</div>
       <h3><a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.titulo)}</a></h3>
-      <div class="meta">${esc(n.fonte)}</div>
+      <div class="meta">${esc(n.fonte)}${n.outras_fontes?.length ? ` <span title="${esc(n.outras_fontes.join(", "))}">e mais ${n.outras_fontes.length} veículo${n.outras_fontes.length > 1 ? "s" : ""}</span>` : ""}</div>
       <p>${esc(n.resumo)}</p>
       <a class="more" href="${esc(n.link)}" target="_blank" rel="noopener">Ler notícia completa ↗</a>
     </article>`;

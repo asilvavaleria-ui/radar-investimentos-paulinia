@@ -128,7 +128,8 @@ def buscar_original_no_bing(titulo):
     except Exception:
         return None, ""
     for e in feed.entries[:5]:
-        if parecido(limpar_html(e.get("title", "")), titulo) >= 0.6:
+        titulo_bing = limpar_html(e.get("title", ""))
+        if normalizar(config.CIDADE) in normalizar(titulo_bing) and parecido(titulo_bing, titulo) >= 0.75:
             return link_real(e.get("link", "")), limpar_html(e.get("summary", ""))
     return None, ""
 
@@ -284,7 +285,8 @@ VERBOS_EMPRESA = (
     r"investe|investir[áa]|vai investir|planeja|projeta|anuncia|anunciou|inicia|iniciou|inaugura|"
     r"inaugurou|garante|passa a|constr[óo]i|construir[áa]|vai construir|instala|instalar[áa]|"
     r"vai instalar|implanta|implantar[áa]|amplia|ampliar[áa]|expande|compra|adquire|adquiriu|"
-    r"escolhe|escolheu|confirma|ter[áa]|abre|come[çc]a|recebe aval|leva|traz|aposta"
+    r"escolhe|escolheu|confirma|ter[áa]|abre|come[çc]a|recebe aval|leva|traz|aposta|adapta|reformula|"
+    r"negocia|reserva|vence|vai sair|ser[áa] a maior"
 )
 RE_EMPRESA_TITULO = re.compile(rf"^([A-Z0-9][\w&.'’-]*(?:\s+(?:[A-Z0-9][\w&.'’-]*|de|do|da|&)){{0,5}})\s+(?:{VERBOS_EMPRESA})\b")
 RE_EMPRESA_TEXTO = re.compile(
@@ -293,7 +295,9 @@ RE_EMPRESA_TEXTO = re.compile(
     r"([A-Z][\w&.'’-]*(?:\s+[A-Z][\w&.'’-]*){0,3})")
 NAO_EMPRESA = {"paulinia", "prefeitura", "governo", "estado", "cidade", "regiao", "municipio", "brasil",
                "sp", "sao paulo", "campinas", "empresa", "multinacional", "nova", "novo", "projeto",
-               "investimento", "o", "a", "os", "as", "em", "com", "setor", "industria", "polo"}
+               "investimento", "o", "a", "os", "as", "em", "com", "setor", "industria", "polo",
+               "lula", "presidente", "governador", "prefeito", "ministro", "secretaria", "refinaria",
+               "maior", "projeto", "obras", "diesel", "alcoolduto", "etanolduto"}
 
 
 def identificar_empresa(titulo, descricao, texto):
@@ -503,6 +507,35 @@ def enviar_noticias(noticias, tipo):
     enviar_email(assunto, html, texto)
 
 
+PALAVRAS_VAZIAS = {"paulinia", "para", "com", "sobre", "mais", "entre", "anuncia", "sera", "apos",
+                   "como", "pela", "pelo", "pelos", "pelas", "cidade", "estado", "partir", "nesta",
+                   "desde", "ate", "seu", "sua", "seus", "suas", "novo", "nova", "tem", "vai"}
+
+
+def palavras_chave(titulo):
+    return {p for p in re.findall(r"[a-z0-9]+", normalizar(titulo))
+            if (len(p) >= 4 or (p.isdigit() and len(p) >= 2)) and p not in PALAVRAS_VAZIAS}
+
+
+def mesma_historia(a, b):
+    pa, pb = palavras_chave(a), palavras_chave(b)
+    if not pa or not pb:
+        return False
+    return parecido(a, b) >= 0.7 or len(pa & pb) / len(pa | pb) >= 0.34
+
+
+def registrar_repetida(item, conhecidas):
+    """Mesma notícia publicada por outro veículo: guarda só como fonte adicional."""
+    for n in conhecidas:
+        dias = abs((datetime.fromisoformat(n["publicado"]) - item["publicado"]).days)
+        if dias <= 10 and mesma_historia(n["titulo"], item["titulo"]):
+            fontes = n.setdefault("outras_fontes", [])
+            if item["fonte"] != n["fonte"] and item["fonte"] not in fontes:
+                fontes.append(item["fonte"])
+            return True
+    return False
+
+
 # ---------------------------------------------------------------------------
 # Execução
 # ---------------------------------------------------------------------------
@@ -534,6 +567,8 @@ def executar(args):
     novas = []
     for item in candidatos[: config.MAX_ARTIGOS_POR_EXECUCAO]:
         vistos.add(item["id"])
+        if registrar_repetida(item, novas + historico):
+            continue
         resultado = analisar(item)
         if resultado:
             novas.append(resultado)

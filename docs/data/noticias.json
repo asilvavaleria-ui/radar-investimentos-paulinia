@@ -14,41 +14,10 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 12,
-  "relevancia": "media"
- },
- {
-  "id": "9621002228bd72d6",
-  "titulo": "JetBio reformula usina em Paulínia para produzir diesel renovável e SAF",
-  "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeFhoZzZqZVk5Y0xORVNOMTRpejhTMDZSS25PZUNxZ0ducW05d3lYbktYdGhiVGJBRzFIeDNQZVBWVF9faFpMdnYzS083Y0hqbnFCaTh2X3VFZ1hKR3VzQmNqTjdxRG13OE1TWUw4OHVoaTBOMUxveGp3a0VfVXRlU1Iwc1Nqdm1XTVRhckllclN3SWp2TWhBSUxDN3Z6azlTQ3NRSkVB?oc=5",
-  "fonte": "boca.com.br",
-  "publicado": "2026-10-09T13:40:00+00:00",
-  "coletado": "2026-10-21T18:56:18.132672+00:00",
-  "resumo": "JetBio reformula usina em Paulínia para produzir diesel renovável e SAF",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
-  "id": "f3d1d411eddb94e5",
-  "titulo": "Fábrica da JetBio em Paulínia (SP) produzirá diesel renovável e SAF",
-  "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPd3JzeEtNY1JoZmljTXgwaFhlS2NUQUhtVU1xVmFhaFdKUVFjNzdoOGVMSmY1d0RFeFVVZlFoSFAzcTNSd05VcktPUzFkZkNjcXJoRm5hYmF6Q1g3My16MmZlazM4VGhyOUlhN1pGQUNKcmwxY0Y0dFQ0UmxJZ1Fvb0tsVHY4YmRhSEp2cGZGLWJFOTBDVjN5aWdCa1hNc3hEX1c0?oc=5",
-  "fonte": "JornalCana",
-  "publicado": "2026-10-09T11:14:00+00:00",
-  "coletado": "2026-10-21T18:56:18.411156+00:00",
-  "resumo": "Fábrica da JetBio em Paulínia (SP) produzirá diesel renovável e SAF",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "MegaWhat"
+  ]
  },
  {
   "id": "473a71c14ef8211d",
@@ -58,14 +27,18 @@
   "publicado": "2026-10-09T06:29:00+00:00",
   "coletado": "2026-10-21T18:56:22.596518+00:00",
   "resumo": "A JetBio reformulou o projeto de uma usina em Paulínia (SP) para incluir a produção de diesel renovável, a partir de etanol , além de combustível sustentável de aviação (SAF, na sigla em inglês). A unidade terá capacidade para processar 1,8 bilhão de litros de etanol por ano e poderá direcionar a matéria-prima para a fabricação de diesel renovável ou SAF, conforme a demanda.",
-  "empresa": "",
+  "empresa": "JetBio",
   "tipo": "Investimento anunciado",
   "setor": "Energia e Petróleo",
   "valores": [],
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 21,
-  "relevancia": "alta"
+  "relevancia": "alta",
+  "outras_fontes": [
+   "boca.com.br",
+   "JornalCana"
+  ]
  },
  {
   "id": "1ca0ecac50436bec",
@@ -101,43 +74,10 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 9,
-  "relevancia": "media"
- },
- {
-  "id": "4ab9cf7a30d85306",
-  "titulo": "Data centers levam 228 MW na primeira disputa por acesso à rede de transmissão",
-  "link": "https://eixos.com.br/energia-eletrica/data-centers-levam-228-mw-na-primeira-disputa-por-acesso-a-rede-de-transmissao/",
-  "fonte": "Agência eixos",
-  "publicado": "2026-10-07T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:25.899366+00:00",
-  "resumo": "A CloudHQ venceu com a Pahlavan One e a Pahlavan Three, empresas pelas quais desenvolve um campus de data centers em Paulínia (SP). Os lances médios ficaram na ordem de R$ 800 por kW, segundo a Associação Brasileira das Empresas de Transmissão de Energia Elétrica ( Abrate ). A CloudHQ lançou o campus de Paulínia em março de 2023, com investimento anunciado de até US$ 3 bilhões.",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Energia e Petróleo",
-  "valores": [
-   "US$ 3 bilhões"
-  ],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "media"
- },
- {
-  "id": "3f360c00939fce0c",
-  "titulo": "ONS aloca 228 MW da Rede Básica para data centers no primeiro leilão da Pnast",
-  "link": "https://megawhat.uol.com.br/geracao/ons-aloca-228-mw-da-rede-basica-para-data-centers-no-primeiro-leilao-da-pnast/",
-  "fonte": "MegaWhat",
-  "publicado": "2026-10-07T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:27.358918+00:00",
-  "resumo": "O Operador Nacional do Sistema Elétrico (ONS) encerrou a primeira temporada de acesso da Política Nacional de Acesso ao Sistema de Transmissão (Pnast) com a alocação de 228 MW de capacidade remanescente da Rede Básica para três data centers em São Paulo.",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 7,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "Agência eixos"
+  ]
  },
  {
   "id": "fc8617deb2ae1162",
@@ -156,26 +96,10 @@
   "valor_reais": 22000000000.0,
   "empregos": 0,
   "pontuacao": 9,
-  "relevancia": "alta"
- },
- {
-  "id": "ecefb7a75d0b37d7",
-  "titulo": "Projeto de R$ 22 bilhões quer criar um “etanolduto’ interligando Sinop a Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNUjBRQmZ0WEVOWFo4RnlBOWktbGk5RUdmNVEzREU0SWNmd1pqVm5RN205VGtaZUNFeC0teHJiR1EyVkFqTDEtZFppVGRhZHVkd2h5dGlpZG9aZEduUEhsdmdJalFJd0dpbGZ3eWMtcE9fdHZfd2dBZDR4eHM1VG15ZjJJMEFJem03bmpDdXgxejBFaXJjR2pXYTdxc2RDc3JwLVVNeGVCMm01U2d3OXUyaWpIdExYZjl2SVdpcGhZVTJvT3BBa096bGN2WTZKQTRsSkdtZg?oc=5",
-  "fonte": "MT Econômico",
-  "publicado": "2026-09-18T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:29.959478+00:00",
-  "resumo": "Projeto de R$ 22 bilhões quer criar um “etanolduto’ interligando Sinop a Paulínia",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Energia e Petróleo",
-  "valores": [
-   "R$ 22 bilhões"
-  ],
-  "valor_reais": 22000000000.0,
-  "empregos": 0,
-  "pontuacao": 9,
-  "relevancia": "alta"
+  "relevancia": "alta",
+  "outras_fontes": [
+   "MT Econômico"
+  ]
  },
  {
   "id": "2548341691266dca",
@@ -195,25 +119,6 @@
   "relevancia": "media"
  },
  {
-  "id": "28b3f7db1f1a18fe",
-  "titulo": "Maior refinaria da Petrobras, Replan tem melhor julho da história na produção de derivados de petróleo",
-  "link": "https://g1.globo.com/sp/campinas-regiao/noticia/2026/08/10/maior-refinaria-da-petrobras-tem-recorde-de-producao-no-1o-semestre-desde-2000.ghtml",
-  "fonte": "G1",
-  "publicado": "2026-08-26T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:35.772086+00:00",
-  "resumo": "Replan, a maior refinaria de petróleo da Petrobras, fica em Paulínia (SP) — Foto: Júlio César Costa/g1 A Refinaria de Paulínia (Replan), a maior da Petrobras , registrou o maior volume de produção de derivados de petróleo para o 1º semestre de toda a série histórica , iniciada em 2000.",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Energia e Petróleo",
-  "valores": [
-   "R$ 6 bilhões"
-  ],
-  "valor_reais": 6000000000.0,
-  "empregos": 0,
-  "pontuacao": 20,
-  "relevancia": "alta"
- },
- {
   "id": "ee57a79f57c9c21b",
   "titulo": "Ultragaz inaugura estação de biometano para abastecer frota pesada em Paulínia (SP)",
   "link": "https://veja.abril.com.br/economia/ultragaz-abre-estacao-propria-de-biometano-para-abastecer-ate-200-caminhoes-por-dia/",
@@ -231,23 +136,6 @@
   "relevancia": "media"
  },
  {
-  "id": "405fc895c4a6e9b5",
-  "titulo": "Maior refinaria da Petrobras tem recorde de produção no 1º semestre desde 2000",
-  "link": "https://g1.globo.com/sp/campinas-regiao/noticia/2026/09/28/maior-refinaria-da-petrobras-registra-alta-de-121percent-na-producao-e-se-aproxima-de-recorde-historico.ghtml",
-  "fonte": "G1",
-  "publicado": "2026-08-10T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:41.247667+00:00",
-  "resumo": "Replan, a maior refinaria de petróleo da Petrobras, fica em Paulínia (SP) — Foto: Júlio César Costa/g1 A Refinaria de Paulínia (Replan), maior unidade de refino da Petrobras , registrou novo avanço na produção de derivados de petróleo em 2026. Um projeto de ampliação da capacidade de processamento da refinaria, com conclusão prevista para 2027, vai possibilitar aumentar a produção dos atuais 434 mil barris por dia para 459 mil barris por dia, aumento de aproximadamente 5%, segundo a Petrobras .",
-  "empresa": "",
-  "tipo": "Expansão",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 17,
-  "relevancia": "alta"
- },
- {
   "id": "46b1543a2f803828",
   "titulo": "Yara negocia venda de fábrica de ácido sulfúrico em Paulínia",
   "link": "https://oglobo.globo.com/blogs/capital/post/2026/08/gigante-norueguesa-vende-fabrica-de-acido-sulfurico-em-paulinia-sp-a-zaraplast.ghtml",
@@ -255,7 +143,7 @@
   "publicado": "2026-08-03T07:00:00+00:00",
   "coletado": "2026-10-21T18:56:45.100552+00:00",
   "resumo": "A Zaraplast , companhia brasileira que é uma das maiores empresas de embalagens plásticas da América do Sul, vai entrar em um novo filão: a produção de ácido sulfúrico, um insumo crucial para setores como os de fertilizantes e mineração. A companhia está comprando uma fábrica de ácido localizada em Paulínia (SP) e que pertence à Yara, gigante norueguesa dos fertilizantes, apurou a coluna . A planta adquirida tem duas linhas de produção de ácido sulfúrico, uma das quais está atualmente “hibernada”.",
-  "empresa": "",
+  "empresa": "Yara",
   "tipo": "Outros sinais",
   "setor": "Agronegócio",
   "valores": [],
@@ -313,41 +201,11 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 15,
-  "relevancia": "media"
- },
- {
-  "id": "6ec95798b6eb5cce",
-  "titulo": "JetBio garante área em Paulínia para construir megaplanta de SAF a partir de etanol",
-  "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQTh0eERkZWNhWG9tdDBFZjNYeTZuYU8tbHZpMy0xVGd3VlZNZldrYUxPUldXXy11WXREZ0gzeEhQNzJnQk5SWjZvbk5fYWxPM0k4T3huVEd0bHFES1dpdk9JZ29tZnUyc1pPbXEycF9fVF9yN1lvR1N4dDFON21qdWU1a2pQRjB1ak1JWE5RV0ZDbHNKNVFXY0h6Z0hxeHdKR3k2VzE2cmZaR1F1TlpjWm9vNDM?oc=5",
-  "fonte": "revistarpanews.com.br",
-  "publicado": "2026-06-08T16:39:10+00:00",
-  "coletado": "2026-10-21T18:56:52.203761+00:00",
-  "resumo": "JetBio garante área em Paulínia para construir megaplanta de SAF a partir de etanol",
-  "empresa": "JetBio",
-  "tipo": "Nova instalação",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "media"
- },
- {
-  "id": "4f67ec9932a78f8c",
-  "titulo": "JetBio reserva área em Paulínia para biorrefinaria de SAF de etanol",
-  "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPSlJGZjRmTm5PVzRDT05GNGxzMVc4SXh3MEg4SkFUZFdLUHRmenNZUDFYYnF5N0xjMlNiR0x1VC1EQmFHcHNNOEVZQ0lDdzg0LWp1c01HazhxclFDOW5Hc1hWYklHMU84dnFtTXZrR2xPak5IWUh6REh4U2JjQWRfcEVqbEhWRUczNHlrdWhKWjhyS0tZOHZhMUpfUkI5dS1JWmt0bWVJY1BXSE5WV3d2NDJSajZ4VTF1OUowa1lBNDdWcVB3SjZRQ1lmRQ?oc=5",
-  "fonte": "eixos",
-  "publicado": "2026-06-08T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:52.401720+00:00",
-  "resumo": "JetBio reserva área em Paulínia para biorrefinaria de SAF de etanol",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "revistarpanews.com.br",
+   "eixos"
+  ]
  },
  {
   "id": "fd1df354e33d9b44",
@@ -369,23 +227,6 @@
   "relevancia": "media"
  },
  {
-  "id": "4ee6750b3c06a77b",
-  "titulo": "Renner inaugura nova loja em Paulínia e amplia presença no estado de São Paulo",
-  "link": "https://infonet.com.br/noticias/economia/renner-inaugura-nova-loja-em-nossa-senhora-do-socorro/",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-05-19T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:02.087612+00:00",
-  "resumo": "Em ritmo acelerado de expansão e com previsão de abertura de até 30 lojas em 2026 , a Renner, maior varejista de moda e lifestyle do Brasil, inaugura em 09 de julho às 10h, uma unidade em Nossa Senhora do Socorro, no estado de Sergipe. Com a inauguração, a Renner consolida ainda mais a presença da marca no Estado.",
-  "empresa": "Renner",
-  "tipo": "Início de operação",
-  "setor": "Comércio e Serviços",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 20,
-  "relevancia": "alta"
- },
- {
   "id": "4f0eeb2644982164",
   "titulo": "Lula visita Replan em Paulínia e Petrobras anuncia R$ 37 bilhões em investimentos até 2030",
   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNzEtckpQVkt4VjMyb1N1ZF84LV9HZlVGOVJFMGJsMnM4c185SXBVRTBDU0QxTnlBNmFDM0xaSlE4ZXlOeWNjc3dEVkNybDlKYW9ZODhsNl90X3hOTEUtem92T01YQVVIUDJjbnJWUHZ3QWVfZ3F3VHVoNVplRzNma0thMG1GRUNycWs4M1JJMU1XbVo2WUZXbmswOHNfSkg0MTJnakhSUlJCQ29sM1ppUGNoalNhZVBneU1YdHJhRWxrUXZEamJMdjhR?oc=5",
@@ -402,26 +243,11 @@
   "valor_reais": 37000000000.0,
   "empregos": 0,
   "pontuacao": 15,
-  "relevancia": "alta"
- },
- {
-  "id": "da4a870d0b163088",
-  "titulo": "Lula anuncia investimentos de R$ 37 bilhões na Replan em Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPd1dCaW1pRkxGNWNJT0EyWHR0NVZ2TjVxWjRtZWM5R0oxZnBLRUJKcmdXdjd5dUZmRUVXRkE5cGtrc1BBZTFrQWZNNXhsUGR3dUJ2S3hjMjg4UWV5SmFNM0cxcjg2UkR4YVJiZDR2ckZteXFrTjEwWEFjdnVOb1FpOVMxLXRsdjJta3o5R1QxdHFFUHp4WjJYZg?oc=5",
-  "fonte": "Hora Campinas",
-  "publicado": "2026-05-18T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:03.398442+00:00",
-  "resumo": "Lula anuncia investimentos de R$ 37 bilhões na Replan em Paulínia",
-  "empresa": "Lula",
-  "tipo": "Investimento anunciado",
-  "setor": "Energia e Petróleo",
-  "valores": [
-   "R$ 37 bilhões"
-  ],
-  "valor_reais": 37000000000.0,
-  "empregos": 0,
-  "pontuacao": 15,
-  "relevancia": "alta"
+  "relevancia": "alta",
+  "outras_fontes": [
+   "noticiasdepaulinia.com.br",
+   "Hora Campinas"
+  ]
  },
  {
   "id": "77eeaf8ab9601fc6",
@@ -431,7 +257,7 @@
   "publicado": "2026-05-18T07:00:00+00:00",
   "coletado": "2026-10-21T18:57:03.682273+00:00",
   "resumo": "Lula anuncia investimentos em visita a Campinas e Paulínia nesta segunda-feira",
-  "empresa": "Lula",
+  "empresa": "",
   "tipo": "Investimento anunciado",
   "setor": "Outros",
   "valores": [],
@@ -448,7 +274,7 @@
   "publicado": "2026-05-18T07:00:00+00:00",
   "coletado": "2026-10-21T18:57:03.992189+00:00",
   "resumo": "Presidente Lula anuncia investimento de R$ 6 bilhões na Replan para modernização e ampliação da produção em Paulínia",
-  "empresa": "Presidente Lula",
+  "empresa": "",
   "tipo": "Expansão",
   "setor": "Energia e Petróleo",
   "valores": [
@@ -458,23 +284,6 @@
   "empregos": 0,
   "pontuacao": 30,
   "relevancia": "alta"
- },
- {
-  "id": "b1b29a457757cd0d",
-  "titulo": "Lula visita Refinaria de Paulínia e Petrobras anuncia investimentos até 2030",
-  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNGNNX2t1cmRDUXJqTmF2WUhFNWQzai1ZTDFaVVdOT1Q3ZnRpS0JYMkMzSW1teDVhT3ZDenI0TzIteUhiMC1vWXZuYmxSRmxod2tMWGdVUE00RTZGUUFjeEtzRUgxM3FZcjBLNktvOThtWnQ3NzU3a05hcVphUEZFc2M5OFpKOWtGT0RwaHFfWnN1VXUySUM1X1ZGVC1fY0pRckFMUVdiRHBYZXV5b0hVTA?oc=5",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-05-16T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:11.179470+00:00",
-  "resumo": "Lula visita Refinaria de Paulínia e Petrobras anuncia investimentos até 2030",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 9,
-  "relevancia": "media"
  },
  {
   "id": "f74001e762fd8473",
@@ -568,25 +377,6 @@
   "relevancia": "alta"
  },
  {
-  "id": "feccc393c5dd535c",
-  "titulo": "Maior refinaria da Petrobras bate recorde bilionário na produção de diesel em meio a crise internacional",
-  "link": "https://g1.globo.com/sp/campinas-regiao/noticia/2026/08/10/maior-refinaria-da-petrobras-tem-recorde-de-producao-no-1o-semestre-desde-2000.ghtml",
-  "fonte": "Revista Fórum",
-  "publicado": "2026-04-24T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:19.084690+00:00",
-  "resumo": "Replan, a maior refinaria de petróleo da Petrobras, fica em Paulínia (SP) — Foto: Júlio César Costa/g1 A Refinaria de Paulínia (Replan), a maior da Petrobras , registrou o maior volume de produção de derivados de petróleo para o 1º semestre de toda a série histórica , iniciada em 2000.",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Energia e Petróleo",
-  "valores": [
-   "R$ 6 bilhões"
-  ],
-  "valor_reais": 6000000000.0,
-  "empregos": 0,
-  "pontuacao": 20,
-  "relevancia": "alta"
- },
- {
   "id": "8ea01d4b646c0f9b",
   "titulo": "INVESTIDORES PRIVADOS E GOVERNO QUEREM CONSTRUIR UM ALCOODUTO DE 2,1 MIL KM PARA O ETANOL DE MILHO DE SINOP À PAULÍNIA",
   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPSVVGaWU5QjdXM1lIeXhrekZUNlRwTmw1d3V1eFVUM04yY1NtMlExV1F0YXUwSFFXMzZsbVVsNGxlX3NOWmFTY2tJXzRISDF6X0dqRTVONUFtT3VtdU9mamFhYk1JXzN5YXp4LXpaV2FtMVpUcVJtWENXVUl5Rmk5eWw0TnlIY1kwQnZRVS1JREEzcWxjWEJMMWoySkdaTmNFTmpkUi1IeWR5allWazYwbmhaSFE1MWtnUy1KUXNsdkxpWXp4emFwTDhyTFpVcVVLRFljaEZMWWdBQmVmVC1TZw?oc=5",
@@ -659,23 +449,6 @@
   "relevancia": "alta"
  },
  {
-  "id": "5c49db5d32fb978d",
-  "titulo": "Governo de São Paulo inaugura em Paulínia a maior planta de biometano do país e transforma resíduos urbanos em energia renovável para indústria e transporte",
-  "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOQVBmdXlNOVZfSUNqVUVSOXZqQ2pRc1hITm9QcU9KVmhNNklhV2c0MjFmS3dEbFF2OVBtSWEtd01kRlMyTHpvMmVHVjlKTjBMcmZxRy1NS1JaT3ZJLVNmbEU4ZjRuMkdqeUFhR0hmUkVqMXI1M1YwRWc2T1hpM0JQYng3Q2FOa3ZRVjdyLXo5dmFBUUJwcWpWTkJtR1lnWFRsM2RQMUZhak5PVlV1YU1LWEw1bnVtQXA1bUYwTHJLZnJoaTduU3IyYlVwY0dVUzZFRlRPbGlsbzAtY0t5SUh0VzJ2SGEtZVEtTnBFTXNIMXViZ2NGbnRtNHZmOXdEYkZFQlJqd283cWI3ZXYtQVpxQUFJem9Yc2NWdW1QcjFIRldjRkE?oc=5",
-  "fonte": "CPG Click Petróleo e Gás",
-  "publicado": "2026-03-10T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:26.834885+00:00",
-  "resumo": "Governo de São Paulo inaugura em Paulínia a maior planta de biometano do país e transforma resíduos urbanos em energia renovável para indústria e transporte",
-  "empresa": "",
-  "tipo": "Início de operação",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "media"
- },
- {
   "id": "689123c45fc80898",
   "titulo": "Paulínia inaugura a maior planta de biometano do Brasil, destaca Secretaria",
   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVmVmQ3VPTmNjYjNaS1NlSjI4RHZFaG1QaXlSMnhnbEtzTmZnQnpETUp4ME5FbWgxa3dScU11RlJVVmRGQXdzeGZpQ010M01yNnd3UHI1Snlvekl1WnppaWUyOUVjTHlMWW5oZkM2VXQ3N0JJOVhxR1FTZlNEVU82cmFrZnZVTjdhQk9aT0M2REhvbmkyMmpZZWdMaXc3WEtpSEdNOTkxY0xyYU8tbWZSUA?oc=5",
@@ -690,50 +463,21 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 12,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "SB Notícias",
+   "Brasil 61",
+   "noticiasdepaulinia.com.br"
+  ]
  },
  {
-  "id": "0666bad25c4b37fa",
-  "titulo": "Maior planta de biometano do Brasil é inaugurada em Paulínia (SP)",
-  "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVkFKRnFMSzkxZE5taWxGRTJhQ09HYnd3RlJiUHFRTlhSbnFsVVFjSWZTcHBXdUFZdkctU2JtalF4SmhsRS1CV2RQRmZyQ09zZG9MX0pPN2NuNmtsT0hveWdSa1R6R3ZNdkM1WXZ2WkU2dm5MZHF2REJDUGFrRHNOLUc0RHgwbVBIa09VVkJ6aVpkZ3pZaTJHNFgtWTBuLUnSAaQBQVVfeXFMTmFRMTllckVCR2NzWFZFYTZuc3RsRWFuTWxZakxRdXhheFNPUVNGRTJjLU5HNk9La2dQTHZtN1hjRDRkdkVNbDBzS1VKb3dLOTBWTVZ3M1ZFd2YyeG9sUWhOeENLZjV5SENoYTNUbk54THZ2ZVkyb1lvMHd1TXdnZnJLVHpYTkFBbTRySWZxRUNDaktwNjlua241RmVLUVNGV0FFVkk?oc=5",
-  "fonte": "Brasil 61",
+  "id": "5c49db5d32fb978d",
+  "titulo": "Governo de São Paulo inaugura em Paulínia a maior planta de biometano do país e transforma resíduos urbanos em energia renovável para indústria e transporte",
+  "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOQVBmdXlNOVZfSUNqVUVSOXZqQ2pRc1hITm9QcU9KVmhNNklhV2c0MjFmS3dEbFF2OVBtSWEtd01kRlMyTHpvMmVHVjlKTjBMcmZxRy1NS1JaT3ZJLVNmbEU4ZjRuMkdqeUFhR0hmUkVqMXI1M1YwRWc2T1hpM0JQYng3Q2FOa3ZRVjdyLXo5dmFBUUJwcWpWTkJtR1lnWFRsM2RQMUZhak5PVlV1YU1LWEw1bnVtQXA1bUYwTHJLZnJoaTduU3IyYlVwY0dVUzZFRlRPbGlsbzAtY0t5SUh0VzJ2SGEtZVEtTnBFTXNIMXViZ2NGbnRtNHZmOXdEYkZFQlJqd283cWI3ZXYtQVpxQUFJem9Yc2NWdW1QcjFIRldjRkE?oc=5",
+  "fonte": "CPG Click Petróleo e Gás",
   "publicado": "2026-03-10T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:27.482469+00:00",
-  "resumo": "Maior planta de biometano do Brasil é inaugurada em Paulínia (SP)",
-  "empresa": "",
-  "tipo": "Início de operação",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
-  "id": "c541c263ebe5c88f",
-  "titulo": "Governo de SP inaugura maior planta de biometano do Brasil em Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZnlxYW5Fa05xcEF2dHZKUTl6d2ltMG44bVFwOEJnTzF2RVhHOEdPZHBETEdoRjNRdjhOWkJ1STF2eTdkbmlsTGk3Zk5aSmFyVjVVWElEMzRhQk1RVWJZaHc3VnpmS1JEZkFMWDJjZ2xvTXQ0OW5sRDdyUldpMWltdzFCbTJxMmtvNGk4MjdYTG1fUjVYUnNDV2pUVklfRkNQZkhYTXhNQlp2d1hlSl9rQg?oc=5",
-  "fonte": "SB Notícias",
-  "publicado": "2026-03-08T08:00:00+00:00",
-  "coletado": "2026-10-21T18:57:29.370991+00:00",
-  "resumo": "Governo de SP inaugura maior planta de biometano do Brasil em Paulínia",
-  "empresa": "",
-  "tipo": "Início de operação",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "media"
- },
- {
-  "id": "4e1b5e4bb0d330b1",
-  "titulo": "Paulínia passa a ter a maior planta de biometano do Brasil; governador participa da inauguração",
-  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWWdaOUlIR3NBcmlRU3JmRzlZT3JMLWE0bThKcnNEUWUwaFNHYzhjWm01akxiMWFDVjZrTHFWNGVuOU1GWXhyaThJeHl4TU1VT2g0WkdwM3pielBHdktKXzNpUnJtUDU2LTVtRjFnYTRiRnBxR0RYanFWMTA5RGJLaFFzT191MFBKNm5lZWMya1NJWHJXNGN5U1BRdUNFUHloSXVZSm5RQWRwTV9Qam5Ka3B6NS1GYVVGUEkxYi1xRWR0aFZWTmt0dw?oc=5",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-03-08T08:00:00+00:00",
-  "coletado": "2026-10-21T18:57:29.609009+00:00",
-  "resumo": "Paulínia passa a ter a maior planta de biometano do Brasil; governador participa da inauguração",
+  "coletado": "2026-10-21T18:57:26.834885+00:00",
+  "resumo": "Governo de São Paulo inaugura em Paulínia a maior planta de biometano do país e transforma resíduos urbanos em energia renovável para indústria e transporte",
   "empresa": "",
   "tipo": "Início de operação",
   "setor": "Energia e Petróleo",

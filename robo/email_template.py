@@ -29,6 +29,11 @@ def _chip(texto, cor, fundo):
             f'font-size:12px;font-weight:600;color:{cor};background:{fundo};">{escape(texto)}</span>')
 
 
+def _mais_fontes(n):
+    outras = n.get("outras_fontes") or []
+    return f" e mais {len(outras)} veículo{'s' if len(outras) > 1 else ''}" if outras else ""
+
+
 def _cartao(n):
     cor = COR_SETOR.get(n["setor"], "#475569")
     chips = ""
@@ -52,7 +57,7 @@ def _cartao(n):
     <tr><td style="padding:18px 20px;">
       <div>{chips}</div>
       <a href="{escape(n['link'])}" style="font-size:17px;line-height:1.35;font-weight:700;color:#0F172A;text-decoration:none;">{escape(n['titulo'])}</a>
-      <div style="font-size:12px;color:#64748B;margin:6px 0 10px;">{escape(n['fonte'])} · {data_br(n['publicado'])}</div>
+      <div style="font-size:12px;color:#64748B;margin:6px 0 10px;">{escape(n['fonte'])}{_mais_fontes(n)} · {data_br(n['publicado'])}</div>
       <div style="font-size:14px;line-height:1.55;color:#334155;">{escape(n['resumo'])}</div>
       <div style="margin-top:14px;">
         <a href="{escape(n['link'])}" style="display:inline-block;padding:8px 16px;border-radius:8px;background:#0B3B66;color:#FFFFFF;font-size:13px;font-weight:600;text-decoration:none;">Ler notícia completa →</a>

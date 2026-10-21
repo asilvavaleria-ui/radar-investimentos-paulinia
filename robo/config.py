@@ -193,7 +193,7 @@ TERMOS_EXCLUSAO = [
     # obras e serviços públicos (o foco são empresas)
     "escola", "creche", "fatec", "faculdade de tecnologia", "ubs", "ponte", "pavimentacao",
     "recape", "ar-condicionado", "mobilidade urbana", "estacao de tratamento de esgoto",
-    "habitantes", "socioambient",
+    "habitantes", "socioambient", "recorde", "melhor julho", "melhor mes", "producao de derivados",
     # investigações e fraudes
     "operacao", "investiga", "fraude", "lavagem", "falsos", "receita mira",
     # segurança, esportes e entretenimento
