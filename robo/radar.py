@@ -23,6 +23,7 @@ import smtplib
 import sys
 import time
 import unicodedata
+from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -88,7 +89,9 @@ def agora():
 # Coleta
 # ---------------------------------------------------------------------------
 def url_google(consulta):
-    q = quote_plus(f"{consulta} when:{config.DIAS_RETROATIVOS}d")
+    # O filtro "when:" do Google só é útil para períodos curtos; acima disso, o corte é feito depois.
+    periodo = f" when:{config.DIAS_RETROATIVOS}d" if config.DIAS_RETROATIVOS <= 30 else ""
+    q = quote_plus(f"{consulta}{periodo}")
     return f"https://news.google.com/rss/search?q={q}&hl=pt-BR&gl=BR&ceid=BR:pt-419"
 
 
@@ -102,7 +105,7 @@ def montar_fontes():
         fontes.append(("Google Notícias", url_google(c)))
         fontes.append(("Bing Notícias", url_bing(c)))
     for site in config.SITES_PRIORITARIOS:
-        fontes.append(("Google Notícias", url_google(f"{config.CIDADE} site:{site}")))
+        fontes.append(("Google Notícias", url_google(f'"{config.CIDADE}" site:{site}')))
     for feed in config.FEEDS_EXTRAS:
         fontes.append(("RSS", feed))
     return fontes
@@ -114,8 +117,24 @@ def baixar_feed(url):
     return feedparser.parse(resposta.content)
 
 
+def parecido(a, b):
+    return SequenceMatcher(None, normalizar(a), normalizar(b)).ratio()
+
+
+def buscar_original_no_bing(titulo):
+    """Quando o link do Google não pode ser decodificado, procura a mesma notícia no Bing."""
+    try:
+        feed = baixar_feed(url_bing(f'"{titulo[:150]}"'))
+    except Exception:
+        return None, ""
+    for e in feed.entries[:5]:
+        if parecido(limpar_html(e.get("title", "")), titulo) >= 0.6:
+            return link_real(e.get("link", "")), limpar_html(e.get("summary", ""))
+    return None, ""
+
+
 def link_real(link):
-    """Remove redirecionadores conhecidos (Bing) para chegar ao site original."""
+    """Remove redirecionadores conhecidos (Bing, Google) para chegar ao site original."""
     if "bing.com" in link:
         destino = parse_qs(urlparse(link).query).get("url")
         if destino:
@@ -155,9 +174,12 @@ def coletar_itens():
             if e.get("source") and e.source.get("title"):
                 fonte = e.source.get("title")
             # O Google acrescenta " - Nome do Veículo" ao fim do título.
-            if origem == "Google Notícias" and " - " in titulo:
-                titulo, _, sufixo = titulo.rpartition(" - ")
-                fonte = fonte or sufixo
+            if origem == "Google Notícias":
+                if fonte and titulo.endswith(f" - {fonte}"):
+                    titulo = titulo[: -len(fonte) - 3]
+                elif " - " in titulo:
+                    titulo, _, sufixo = titulo.rpartition(" - ")
+                    fonte = fonte or sufixo
             if not titulo:
                 continue
             item_id = gerar_id(titulo)
@@ -183,6 +205,8 @@ def ler_artigo(url):
         r.raise_for_status()
     except Exception:
         return "", "", url
+    if "news.google.com" in r.url or "consent.google" in r.url:
+        return "", "", url  # página do próprio Google, não da notícia
     sopa = BeautifulSoup(r.text, "html.parser")
     meta = sopa.find("meta", attrs={"property": "og:description"}) or \
         sopa.find("meta", attrs={"name": "description"})
@@ -207,14 +231,15 @@ RE_EMPREGOS = re.compile(
     r"(\d{1,3}(?:\.\d{3})*|\d+)\s+(?:novos\s+|novas\s+)?(empregos|postos de trabalho|vagas)",
     re.IGNORECASE,
 )
-MULTIPLICADORES = {"bi": 1e9, "bilh": 1e9, "mi": 1e6, "milh": 1e6, "mil": 1e3}
+# A ordem importa: "mil" precisa ser testado antes de "mi".
+MULTIPLICADORES = [("bilh", 1e9), ("bi", 1e9), ("milh", 1e6), ("mil", 1e3), ("mi", 1e6)]
 
 
 def extrair_valores(texto):
     valores, maior_reais = [], 0.0
     for moeda, numero, escala in RE_VALOR.findall(texto):
         escala_n = normalizar(escala)
-        mult = next((v for k, v in MULTIPLICADORES.items() if escala_n.startswith(k)), 1)
+        mult = next((v for k, v in MULTIPLICADORES if escala_n.startswith(k)), 1)
         try:
             n = float(numero.replace(".", "").replace(" ", "").replace(",", ".")) * mult
         except ValueError:
@@ -239,14 +264,76 @@ def extrair_empregos(texto):
     return maior if maior < 100000 else 0
 
 
+def contem(texto_normalizado, termo, inteiro=True):
+    """Procura o termo (sem acento) como palavra inteira ou, se inteiro=False, como início de palavra."""
+    fim = r"(?!\w)" if inteiro else ""
+    return re.search(rf"(?<!\w){re.escape(normalizar(termo))}{fim}", texto_normalizado) is not None
+
+
 def pontuar(titulo, descricao, artigo):
     partes = [(normalizar(titulo), 3), (normalizar(descricao), 2), (normalizar(artigo), 1)]
     pontos = 0
     for termo, peso in config.TERMOS_INVESTIMENTO.items():
-        padrao = re.compile(rf"\b{re.escape(termo)}\b")
+        padrao = re.compile(rf"(?<!\w){re.escape(normalizar(termo))}(?!\w)")
         multiplicador = max((m for texto, m in partes if padrao.search(texto)), default=0)
         pontos += peso * multiplicador
     return pontos
+
+
+VERBOS_EMPRESA = (
+    r"investe|investir[áa]|vai investir|planeja|projeta|anuncia|anunciou|inicia|iniciou|inaugura|"
+    r"inaugurou|garante|passa a|constr[óo]i|construir[áa]|vai construir|instala|instalar[áa]|"
+    r"vai instalar|implanta|implantar[áa]|amplia|ampliar[áa]|expande|compra|adquire|adquiriu|"
+    r"escolhe|escolheu|confirma|ter[áa]|abre|come[çc]a|recebe aval|leva|traz|aposta"
+)
+RE_EMPRESA_TITULO = re.compile(rf"^([A-Z0-9][\w&.'’-]*(?:\s+(?:[A-Z0-9][\w&.'’-]*|de|do|da|&)){{0,5}})\s+(?:{VERBOS_EMPRESA})\b")
+RE_EMPRESA_TEXTO = re.compile(
+    r"\b(?:multinacional|empresa|companhia|grupo|fabricante|startup|farmac[êe]utica|"
+    r"distribuidora|operadora|produtora)\s+(?:[a-zà-ú]+\s+){0,2}"
+    r"([A-Z][\w&.'’-]*(?:\s+[A-Z][\w&.'’-]*){0,3})")
+NAO_EMPRESA = {"paulinia", "prefeitura", "governo", "estado", "cidade", "regiao", "municipio", "brasil",
+               "sp", "sao paulo", "campinas", "empresa", "multinacional", "nova", "novo", "projeto",
+               "investimento", "o", "a", "os", "as", "em", "com", "setor", "industria", "polo"}
+
+
+def identificar_empresa(titulo, descricao, texto):
+    candidatos = []
+    m = RE_EMPRESA_TITULO.match(titulo)
+    if m:
+        candidatos.append(m.group(1))
+    for trecho in (descricao, texto[:1500]):
+        m = RE_EMPRESA_TEXTO.search(trecho or "")
+        if m:
+            candidatos.append(m.group(1))
+    for c in candidatos:
+        c = c.strip(" .,-")
+        if normalizar(c) not in NAO_EMPRESA and normalizar(c.split()[0]) not in NAO_EMPRESA and len(c) >= 2:
+            return c
+    return ""
+
+
+TIPOS = [
+    ("Início de operação", ["inaugura", "passa a operar", "inicia operacao", "inicia operacoes",
+                            "comeca a operar", "entra em operacao"]),
+    ("Obras iniciadas", ["inicia construcao", "iniciou a construcao", "inicio da construcao",
+                         "iniciou as obras", "inicia obras", "inicio das obras", "pedra fundamental",
+                         "iniciou oficialmente", "inicia oficialmente", "comecou a construir", "obras comecam"]),
+    ("Nova instalação", ["nova fabrica", "nova planta", "nova unidade", "instalar", "instalacao",
+                         "implantacao", "implanta", "se instala", "garante area", "terreno",
+                         "construir", "construira", "escolhe", "escolheu", "chega", "instalad",
+                         "construid", "novo centro", "novo data center", "novo laboratorio"]),
+    ("Expansão", ["expansao", "amplia", "ampliacao", "expande", "segunda unidade",
+                  "nova linha de producao", "capacidade produtiva"]),
+    ("Investimento anunciado", ["invest", "aporte", "milhoes", "bilhoes", "bilhao", "milhao"]),
+]
+
+
+def classificar_tipo(titulo, descricao):
+    t = normalizar(f"{titulo} {descricao}")
+    for tipo, termos in TIPOS:
+        if any(contem(t, termo, inteiro=False) for termo in termos):
+            return tipo
+    return "Outros sinais"
 
 
 def classificar_setor(texto):
@@ -311,21 +398,37 @@ def resumo_ia(titulo, texto):
 
 def analisar(item):
     titulo_n = normalizar(item["titulo"])
-    if any(re.search(rf"\b{re.escape(t)}", titulo_n) for t in config.TERMOS_EXCLUSAO):
+    if any(contem(titulo_n, t.strip(), inteiro=False) for t in config.TERMOS_EXCLUSAO):
+        return None
+
+    descricao = item["descricao"]
+    if normalizar(descricao).startswith(titulo_n[:40]):
+        descricao = ""  # o RSS do Google repete o título na descrição
+
+    # Sem sinal de empreendimento no título/subtítulo, nem vale a pena abrir a página.
+    def tem_sinal(*textos):
+        t = normalizar(" ".join(textos))
+        return any(contem(t, s, inteiro=False) for s in config.SINAIS_EMPREENDIMENTO)
+    if not tem_sinal(item["titulo"], descricao):
         return None
 
     url = link_real(item["link"])
-    texto, meta_desc, url_final = ler_artigo(url)
-    descricao = item["descricao"]
+    if "news.google.com" in url:
+        original, desc_bing = buscar_original_no_bing(item["titulo"])
+        if original:
+            url, descricao = original, descricao or desc_bing
+    texto, meta_desc, url_final = ler_artigo(url) if "news.google.com" not in url else ("", "", url)
     if not descricao or normalizar(descricao).startswith(titulo_n[:40]):
-        descricao = meta_desc  # o RSS do Google repete o título na descrição
+        descricao = meta_desc
 
     fonte = item["fonte"]
     if not fonte or "bing.com" in fonte or "google.com" in fonte:
         fonte = urlparse(url_final).netloc.replace("www.", "")
 
     tudo = f"{item['titulo']} {descricao} {texto}"
-    if normalizar(config.CIDADE) not in normalizar(tudo):
+    # Paulínia precisa aparecer no título, no subtítulo ou no início da matéria
+    # (evita páginas que só citam a cidade em links laterais).
+    if normalizar(config.CIDADE) not in normalizar(f"{item['titulo']} {descricao} {texto[:3000]}"):
         return None
 
     pontos = pontuar(item["titulo"], descricao, texto)
@@ -335,6 +438,7 @@ def analisar(item):
     valores, maior_valor = extrair_valores(tudo)
     empregos = extrair_empregos(tudo)
     resumo = resumo_ia(item["titulo"], texto) or resumo_extrativo(item["titulo"], texto, descricao)
+    empresa = identificar_empresa(item["titulo"], descricao, texto)
     alta = pontos >= config.PONTUACAO_ALTA or maior_valor >= 1e7 or empregos >= 100
 
     return {
@@ -345,6 +449,8 @@ def analisar(item):
         "publicado": item["publicado"].isoformat(),
         "coletado": agora().isoformat(),
         "resumo": resumo,
+        "empresa": empresa,
+        "tipo": classificar_tipo(item["titulo"], descricao),
         "setor": classificar_setor(tudo),
         "valores": valores,
         "valor_reais": maior_valor,
@@ -369,7 +475,8 @@ def enviar_email(assunto, html, texto):
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = assunto
-    msg["From"] = formataddr((os.getenv("EMAIL_REMETENTE_NOME", "Radar de Investimentos"), usuario))
+    remetente = os.getenv("EMAIL_REMETENTE") or usuario
+    msg["From"] = formataddr((os.getenv("EMAIL_REMETENTE_NOME", "Radar de Investimentos"), remetente))
     msg["To"] = ", ".join(destinatarios)
     msg.attach(MIMEText(texto, "plain", "utf-8"))
     msg.attach(MIMEText(html, "html", "utf-8"))
@@ -381,7 +488,7 @@ def enviar_email(assunto, html, texto):
         servidor.starttls()
     with servidor:
         servidor.login(usuario, senha)
-        servidor.sendmail(usuario, destinatarios, msg.as_string())
+        servidor.sendmail(remetente, destinatarios, msg.as_string())
     print(f"  e-mail enviado para {len(destinatarios)} destinatário(s)")
     return True
 

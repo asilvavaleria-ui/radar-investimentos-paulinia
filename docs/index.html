@@ -87,6 +87,8 @@
   .chip.hot { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
   .chip.money { background: var(--money-soft); color: var(--money); border-color: transparent; }
   .chip.sector-chip { color: var(--c); }
+  .chip.company { background: var(--text); color: var(--surface); border-color: transparent; }
+  .chip.type { background: var(--brand-soft); color: var(--brand); border-color: transparent; }
   .card h3 { margin: 0; font-size: 17px; line-height: 1.35; font-weight: 700; letter-spacing: -.01em; }
   .card h3 a { text-decoration: none; }
   .card h3 a:hover { color: var(--brand-2); text-decoration: underline; text-underline-offset: 3px; }
@@ -137,7 +139,7 @@
     <div class="kpi"><div class="label">Notícias no período</div><div class="value" id="k-total">–</div><div class="hint" id="k-total-h">&nbsp;</div></div>
     <div class="kpi"><div class="label">Alta relevância</div><div class="value" id="k-alta">–</div><div class="hint">com valor, empregos ou forte sinal</div></div>
     <div class="kpi"><div class="label">Maior valor citado</div><div class="value" id="k-valor">–</div><div class="hint" id="k-valor-h">&nbsp;</div></div>
-    <div class="kpi"><div class="label">Setor em destaque</div><div class="value" id="k-setor" style="font-size:20px;line-height:1.7">–</div><div class="hint" id="k-setor-h">&nbsp;</div></div>
+    <div class="kpi"><div class="label">Empresas identificadas</div><div class="value" id="k-emp">–</div><div class="hint" id="k-emp-h">&nbsp;</div></div>
   </section>
 
   <div class="layout">
@@ -193,7 +195,7 @@ function filtradas(ignorarSetor = false) {
     new Date(n.publicado).getTime() >= limite &&
     (!estado.soAlta || n.relevancia === "alta") &&
     (ignorarSetor || !estado.setor || n.setor === estado.setor) &&
-    (!termo || norm(n.titulo + " " + n.resumo + " " + n.fonte + " " + n.setor).includes(termo)));
+    (!termo || norm(n.titulo + " " + n.resumo + " " + n.fonte + " " + n.setor + " " + (n.empresa || "") + " " + (n.tipo || "")).includes(termo)));
 }
 
 function renderKpis(lista) {
@@ -204,11 +206,10 @@ function renderKpis(lista) {
   $("k-valor").textContent = maior ? reais(maior.valor_reais) : "—";
   $("k-valor-h").textContent = maior ? maior.titulo : "nenhum valor citado";
   $("k-valor-h").title = maior ? maior.titulo : "";
-  const cont = {};
-  lista.forEach(n => cont[n.setor] = (cont[n.setor] || 0) + 1);
-  const top = Object.entries(cont).sort((a, b) => b[1] - a[1])[0];
-  $("k-setor").textContent = top ? top[0] : "—";
-  $("k-setor-h").textContent = top ? `${top[1]} notícia${top[1] > 1 ? "s" : ""}` : " ";
+  const empresas = [...new Set(lista.map(n => n.empresa).filter(Boolean))];
+  $("k-emp").textContent = empresas.length.toLocaleString("pt-BR");
+  $("k-emp-h").textContent = empresas.length ? empresas.slice(0, 4).join(", ") : "nenhuma no período";
+  $("k-emp-h").title = empresas.join(", ");
 }
 
 function renderSetores() {
@@ -239,6 +240,8 @@ function renderLista(lista) {
     const cor = CORES[n.setor] || CORES.Outros;
     const chips = [
       n.relevancia === "alta" ? `<span class="chip hot">★ Alta relevância</span>` : "",
+      n.empresa ? `<span class="chip company">🏢 ${esc(n.empresa)}</span>` : "",
+      n.tipo ? `<span class="chip type">${esc(n.tipo)}</span>` : "",
       `<span class="chip sector-chip">${esc(n.setor)}</span>`,
       n.valor_reais ? `<span class="chip money">💰 ${reais(n.valor_reais)}</span>` : (n.valores?.[0] ? `<span class="chip money">💰 ${esc(n.valores[0])}</span>` : ""),
       n.empregos ? `<span class="chip">👷 ${n.empregos.toLocaleString("pt-BR")} empregos</span>` : ""
@@ -260,8 +263,8 @@ function render() {
 }
 
 function exportarCSV() {
-  const linhas = [["Data", "Título", "Fonte", "Setor", "Relevância", "Valor citado", "Empregos", "Resumo", "Link"]];
-  filtradas().forEach(n => linhas.push([new Date(n.publicado).toLocaleDateString("pt-BR"), n.titulo, n.fonte, n.setor,
+  const linhas = [["Data", "Empresa", "Tipo", "Título", "Fonte", "Setor", "Relevância", "Valor citado", "Empregos", "Resumo", "Link"]];
+  filtradas().forEach(n => linhas.push([new Date(n.publicado).toLocaleDateString("pt-BR"), n.empresa || "", n.tipo || "", n.titulo, n.fonte, n.setor,
     n.relevancia === "alta" ? "Alta" : "Média", (n.valores || []).join(" | "), n.empregos || "", n.resumo, n.link]));
   const csv = "﻿" + linhas.map(l => l.map(c => `"${String(c).replace(/"/g, '""')}"`).join(";")).join("\n");
   const a = document.createElement("a");

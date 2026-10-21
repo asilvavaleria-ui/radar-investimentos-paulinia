@@ -31,7 +31,12 @@ def _chip(texto, cor, fundo):
 
 def _cartao(n):
     cor = COR_SETOR.get(n["setor"], "#475569")
-    chips = _chip(n["setor"], cor, "#F1F5F9")
+    chips = ""
+    if n.get("empresa"):
+        chips += _chip(f"🏢 {n['empresa']}", "#0F172A", "#E2E8F0")
+    if n.get("tipo"):
+        chips += _chip(n["tipo"], "#0B3B66", "#E7F0FB")
+    chips += _chip(n["setor"], cor, "#F1F5F9")
     if n["relevancia"] == "alta":
         chips = _chip("★ Alta relevância", "#92400E", "#FEF3C7") + chips
     if n.get("valor_reais"):

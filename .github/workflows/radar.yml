@@ -13,6 +13,9 @@ on:
         type: choice
         default: busca
         options: [busca, email-teste, resumo-semanal]
+      dias:
+        description: "Buscar notícias de quantos dias para trás (use 365 na primeira vez)"
+        default: "15"
 
 permissions:
   contents: write
@@ -24,7 +27,7 @@ concurrency:
 jobs:
   radar:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -42,7 +45,10 @@ jobs:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORTA: ${{ secrets.SMTP_PORTA }}
           EMAIL_DESTINATARIOS: ${{ secrets.EMAIL_DESTINATARIOS }}
+          EMAIL_REMETENTE: ${{ secrets.EMAIL_REMETENTE }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DIAS_RETROATIVOS: ${{ github.event.inputs.dias }}
+          MAX_ARTIGOS: ${{ github.event.inputs.dias && '400' || '' }}
           PAINEL_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: |
           [ -z "$SMTP_HOST" ] && unset SMTP_HOST
@@ -62,4 +68,4 @@ jobs:
           git config user.email "radar-bot@users.noreply.github.com"
           git add docs/data data
           git diff --cached --quiet || git commit -m "Radar: atualização $(date -u +'%Y-%m-%d %H:%M') UTC"
-          git push
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
