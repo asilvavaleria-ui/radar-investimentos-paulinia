@@ -1,5 +1,22 @@
 [
  {
+  "id": "7601d5bbe55233c3",
+  "titulo": "Bom Prato de Sumaré vai abastecer novas unidades móveis em Nova Odessa e Paulínia",
+  "link": "https://sumare.portaldacidade.com/noticias/regiao/bom-prato-de-sumare-vai-abastecer-novas-unidades-moveis-em-nova-odessa-e-paulinia-1239",
+  "fonte": "Portal da Cidade - Sumaré / SP",
+  "publicado": "2026-10-19T12:12:00+00:00",
+  "coletado": "2026-10-21T19:33:30.330380+00:00",
+  "resumo": "Nova Odessa e Paulínia passarão a contar com o serviço Bom Prato Móvel, que oferecerá refeições completas por R$ 1, utilizando a estrutura de preparo de alimentos instalada em Sumaré. Paulínia anunciou a adesão ao Bom Prato Móvel, com previsão de oferecer 300 almoços por dia pelo valor de R$ 1. Emprega Paulínia anuncia 84 vagas de emprego com salários de até R$ 3,1 mil Sumaré participa de congresso internacional sobre resiliência climática Rov.",
+  "empresa": "",
+  "tipo": "Expansão",
+  "setor": "Infraestrutura Pública",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 84,
+  "pontuacao": 9,
+  "relevancia": "media"
+ },
+ {
   "id": "a98bc33dad05f0ad",
   "titulo": "ONS destina 228 MW da Rede Básica a três projetos de data centers em São Paulo",
   "link": "https://www.datacenterdynamics.com/br/not%C3%ADcias/ons-destina-228-mw-da-rede-b%C3%A1sica-a-tr%C3%AAs-projetos-de-data-centers-em-s%C3%A3o-paulo/",
@@ -20,6 +37,27 @@
   ]
  },
  {
+  "id": "5de773dd20dfa92f",
+  "titulo": "Vereadores de Paulínia terão R$ 13,2 milhões em emendas impositivas para 2027",
+  "link": "https://noticiasdepaulinia.com.br/vereadores-de-paulinia-terao-r-132-milhoes-em-emendas-impositivas-para-2027/",
+  "fonte": "noticiasdepaulinia.com.br",
+  "publicado": "2026-10-11T10:46:07+00:00",
+  "coletado": "2026-10-21T19:33:35.576101+00:00",
+  "resumo": "Os 17 vereadores de Paulínia poderão indicar, juntos, até R$ 13.200.500,00 em emendas impositivas para execução em 2027. Cada parlamentar terá direito a indicar R$ 776.500,00, sendo que 50% desse montante deverá ser destinado obrigatoriamente à área da Saúde. Os recursos fazem parte do orçamento municipal e permitem que os vereadores indiquem investimentos e ações que consideram prioritários para a cidade.",
+  "empresa": "",
+  "tipo": "Investimento anunciado",
+  "setor": "Saúde e Educação",
+  "valores": [
+   "R$ 13,2 milhões",
+   "R$ 13.200.500,00",
+   "R$ 776.500,00"
+  ],
+  "valor_reais": 13200500.0,
+  "empregos": 0,
+  "pontuacao": 9,
+  "relevancia": "alta"
+ },
+ {
   "id": "473a71c14ef8211d",
   "titulo": "JetBio adapta usina em SP para produzir diesel a partir de etanol",
   "link": "https://globorural.globo.com/biocombustiveis/noticia/2026/10/jetbio-adapta-usina-em-sp-para-produzir-diesel-a-partir-de-etanol.ghtml",
@@ -37,7 +75,8 @@
   "relevancia": "alta",
   "outras_fontes": [
    "boca.com.br",
-   "JornalCana"
+   "JornalCana",
+   "Estadão"
   ]
  },
  {
@@ -55,6 +94,25 @@
    "US$ 500 milhões"
   ],
   "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 24,
+  "relevancia": "alta"
+ },
+ {
+  "id": "b13e0af0bfddab5c",
+  "titulo": "Inpasa projeta investimento de R$ 22 bilhões em megassistema de dutos entre Mato Grosso e Paulínia",
+  "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOLXdMaEcyQ2pOUzlXTmhxcDh4RkMydlNoUnZHQWd5ZGxIcml6a1JhcmFJcGpHZGpVZE1jN0VvR3VpNzZ5cUdEVE9GTFMxN0h2Rlh0c0d0bDBzWkZMTmVUakExaVZTYUpnVXRuUkpwTV81QUdZSUlUWEIzTFZ0dUk1VE10VnBjam5KMlZRYkdPdkxtamswd0VWZkdydEpadzlWa1BPenFxOGcwZjhBUkxvaUkzSnhzMVNWeUtrVTZBdXZwVzY3bnc?oc=5",
+  "fonte": "AMR Business Intelligence",
+  "publicado": "2026-10-07T07:00:00+00:00",
+  "coletado": "2026-10-21T19:33:36.467848+00:00",
+  "resumo": "Inpasa projeta investimento de R$ 22 bilhões em megassistema de dutos entre Mato Grosso e Paulínia",
+  "empresa": "Inpasa",
+  "tipo": "Investimento anunciado",
+  "setor": "Outros",
+  "valores": [
+   "R$ 22 bilhões"
+  ],
+  "valor_reais": 22000000000.0,
   "empregos": 0,
   "pontuacao": 24,
   "relevancia": "alta"
