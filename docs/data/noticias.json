@@ -8,7 +8,7 @@
   "coletado": "2026-10-21T18:56:17.902943+00:00",
   "resumo": "A Pahlavan One e Pahlavan Three integram o campus GRU da CloudHQ, em Paulínia (SP). A Digital DC Brasil é uma empresa local de data centers que opera sob a NextStream, plataforma latino-americana criada pela gestora de investimentos Actis. Segundo ele, a PNAST oferece mais previsibilidade aos agentes, torna os investimentos mais eficientes e garante que a expansão da transmissão acompanhe as necessidades de desenvolvimento do país.",
   "empresa": "",
-  "tipo": "Outros sinais",
+  "tipo": "Expansão",
   "setor": "Tecnologia",
   "valores": [],
   "valor_reais": 0.0,
@@ -59,7 +59,7 @@
   "coletado": "2026-10-21T18:56:22.596518+00:00",
   "resumo": "A JetBio reformulou o projeto de uma usina em Paulínia (SP) para incluir a produção de diesel renovável, a partir de etanol , além de combustível sustentável de aviação (SAF, na sigla em inglês). A unidade terá capacidade para processar 1,8 bilhão de litros de etanol por ano e poderá direcionar a matéria-prima para a fabricação de diesel renovável ou SAF, conforme a demanda.",
   "empresa": "",
-  "tipo": "Outros sinais",
+  "tipo": "Investimento anunciado",
   "setor": "Energia e Petróleo",
   "valores": [],
   "valor_reais": 0.0,
@@ -112,7 +112,7 @@
   "coletado": "2026-10-21T18:56:25.899366+00:00",
   "resumo": "A CloudHQ venceu com a Pahlavan One e a Pahlavan Three, empresas pelas quais desenvolve um campus de data centers em Paulínia (SP). Os lances médios ficaram na ordem de R$ 800 por kW, segundo a Associação Brasileira das Empresas de Transmissão de Energia Elétrica ( Abrate ). A CloudHQ lançou o campus de Paulínia em março de 2023, com investimento anunciado de até US$ 3 bilhões.",
   "empresa": "",
-  "tipo": "Outros sinais",
+  "tipo": "Investimento anunciado",
   "setor": "Energia e Petróleo",
   "valores": [
    "US$ 3 bilhões"
@@ -140,28 +140,6 @@
   "relevancia": "media"
  },
  {
-  "id": "751a4fa77032715c",
-  "titulo": "Receita mira grupo financeiro que movimentou R$ 11,6 bi e investiga compra de distribuidora",
-  "link": "https://exame.com/brasil/receita-mira-grupo-financeiro-que-movimentou-r-116-bi-e-investiga-compra-de-distribuidora/",
-  "fonte": "Exame",
-  "publicado": "2026-09-24T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:29.020144+00:00",
-  "resumo": "Segundo os investigadores, uma empresa financeira envolvida nas operações movimentou cerca de R$ 11,6 bilhões entre 2021 e 2025. A apuração também identificou uma operação de aproximadamente R$ 370 milhões envolvendo direitos creditórios da usina. Conforme a investigação, a usina sucroalcooleira teria recebido R$ 100 milhões enviados pela organização criminosa para financiar a aquisição.",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Energia e Petróleo",
-  "valores": [
-   "R$ 11,6 bi",
-   "R$ 11,6 bilhões",
-   "R$ 370 milhões",
-   "R$ 100 milhões"
-  ],
-  "valor_reais": 11600000000.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "alta"
- },
- {
   "id": "fc8617deb2ae1162",
   "titulo": "Projeto Pascal prevê etanolduto de R$ 22 bilhões entre Sinop a Paulínia",
   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdGc4SVp5Zm5tOVJvcFRSQktZb2t2dnU0Q0o1UklQc19Ec2hEVjhLb0Mzcl9NX2hiU2tWY19ZOEJrR3BrTDlEal9lMno1ZjZiWDA4cW1sRkpNeXN0SEhmZ0xvWHRmcWx5c3Fad1FtdEtadm5xUXcxZzZBdFNvVDZobV9yczBGYnF1aHBFRElxczkwV3hjUjYzREU5OXJ4eWFydG5mZ2l3a0Q2a2ppUmk4R1R1dU9PRGM?oc=5",
@@ -179,23 +157,6 @@
   "empregos": 0,
   "pontuacao": 9,
   "relevancia": "alta"
- },
- {
-  "id": "95c4617f4c9692f8",
-  "titulo": "Operação Paládio mira esquema de falsos investimentos e lavagem de dinheiro em Paulínia e região",
-  "link": "https://180graus.com/plantao-policial/operacao-paladio-investiga-fraude-com-falsos-investimentos-e-lavagem-de-dinheiro/",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-09-22T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:29.687914+00:00",
-  "resumo": "A Polícia Civil de São Paulo deflagrou, nesta terça-feira (22/09), a Operação Paládio para investigar um esquema de fraude com falsos investimentos e lavagem de dinheiro. Ao todo, são cumpridos 18 ...",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Agronegócio",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
  },
  {
   "id": "ecefb7a75d0b37d7",
@@ -278,7 +239,7 @@
   "coletado": "2026-10-21T18:56:41.247667+00:00",
   "resumo": "Replan, a maior refinaria de petróleo da Petrobras, fica em Paulínia (SP) — Foto: Júlio César Costa/g1 A Refinaria de Paulínia (Replan), maior unidade de refino da Petrobras , registrou novo avanço na produção de derivados de petróleo em 2026. Um projeto de ampliação da capacidade de processamento da refinaria, com conclusão prevista para 2027, vai possibilitar aumentar a produção dos atuais 434 mil barris por dia para 459 mil barris por dia, aumento de aproximadamente 5%, segundo a Petrobras .",
   "empresa": "",
-  "tipo": "Investimento anunciado",
+  "tipo": "Expansão",
   "setor": "Energia e Petróleo",
   "valores": [],
   "valor_reais": 0.0,
@@ -405,25 +366,6 @@
   "valor_reais": 6000000.0,
   "empregos": 0,
   "pontuacao": 12,
-  "relevancia": "media"
- },
- {
-  "id": "aaff8f86aa15e393",
-  "titulo": "Governo de SP investe R$ 5 milhões em obras de mobilidade urbana em Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSXlJRlMwM1JHR0U4b3dkMmt2R1kyUllSRExRMG8wa01TOTVYWlBidTRUdnpKMGxxX0Fid3hQbXlhVHcycE15aFg2b3NPZnNHUnBuLTVfa2NSTU5FcU1vck5YU04xUjg0NTNrQVZibWpmX2pRQ0pKS292UVJBQXUtUS0xaERKSUw5dzdLeXdUX01nNmZ3cVJzRFh6Q005UVFXQWkxdzBqMThuNGJyelF3?oc=5",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-05-23T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:58.247378+00:00",
-  "resumo": "Governo de SP investe R$ 5 milhões em obras de mobilidade urbana em Paulínia",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Infraestrutura Pública",
-  "valores": [
-   "R$ 5 milhões"
-  ],
-  "valor_reais": 5000000.0,
-  "empregos": 0,
-  "pontuacao": 15,
   "relevancia": "media"
  },
  {
@@ -698,59 +640,6 @@
   "relevancia": "media"
  },
  {
-  "id": "7d8195c612636cd0",
-  "titulo": "Governo de SP inaugura Fatec Paulínia e amplia vagas",
-  "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBZOGMtam9qNnZLUEFBTGI3Z2FyNGxyRjFsOFdRdkpVRldzbHhaTVYxUzBNT2xubm95TDlPZXlQNkVFdVU0enpHTDNEYVdPSW9mdDBscUhXcktUdkpnLXVWS0RpMkJ1WHRFOFZHSlNHUVR6QTIzakpMYU5TOA?oc=5",
-  "fonte": "Portal ABC do ABC",
-  "publicado": "2026-04-10T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:20.951051+00:00",
-  "resumo": "Governo de SP inaugura Fatec Paulínia e amplia vagas",
-  "empresa": "",
-  "tipo": "Início de operação",
-  "setor": "Outros",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 9,
-  "relevancia": "media"
- },
- {
-  "id": "ec95aeff1c5c83a0",
-  "titulo": "Cidades “irmãs” somam mais de 2 milhões de habitantes e reforçam a força regional de Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQlZMN3NGeVFZRXdOTVpSVnUzVDRXaXEya1lla0VqaFFMWUZlZmsweW9UYmdOZG8zaVdrZlJRb2pTN1pHRkxNVGlFRmgzXzZhUUlnZzhUaEMwcDBLb1pGclBqcXlJd3RLeGRUNkJyQzBubklMM0ZGYkduQnpoWHVxbzZvaW1ZVURleTZERjJFSTl1dXNya0FmVWdhSllPSk00bEFtNmkxRWtsYU83N2Z5c0JtRThrVE1QdmI1X01icmRrNThS?oc=5",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-04-04T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:21.623842+00:00",
-  "resumo": "Cidades “irmãs” somam mais de 2 milhões de habitantes e reforçam a força regional de Paulínia",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Outros",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
-  "id": "f132c584b3663ce9",
-  "titulo": "Petrobras investe mais de R$ 53 milhões em projetos socioambientais com atuação em Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOVDlrbWREVFVzMHZlc2JBQmZidWpqa21Sc2Y4bVExT2w4N3FSa0RmckVFVEZKU1FwUy1ZTHhTU2MzVEt6d0NWQmYxVzR0ZUFTT0ViMEZqNzgyRHpzUlhKWGNac1ZtQUdQSGVHVWVIaU1lQ25vcUhqY0pIU2hhOTY2UU9SeDQ1b3JCTmZYRGJNSkE5QUhoaUd3MUtUQWpQamtkR1dGRVBnUVdnMVFqRHJoSkExSFFmcml4SjJyUzN2NGUxdkc3SmhqQll6Tzd1MmdnMXM5bWh2MjA2SXA1UXhGOHh4VFlkdm0zQVRR?oc=5",
-  "fonte": "Agência Petrobras de Notícias",
-  "publicado": "2026-03-31T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:21.938560+00:00",
-  "resumo": "Petrobras investe mais de R$ 53 milhões em projetos socioambientais com atuação em Paulínia",
-  "empresa": "Petrobras",
-  "tipo": "Investimento anunciado",
-  "setor": "Energia e Petróleo",
-  "valores": [
-   "R$ 53 milhões"
-  ],
-  "valor_reais": 53000000.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "alta"
- },
- {
   "id": "c870fc244e1cb81b",
   "titulo": "Sabesp anuncia mais de R$ 152 milhões em investimentos em saneamento em Paulínia até 2029",
   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZXZ2TU8zLUNyaHBBYUd0UG1ISzlYamFlQlFnaXNaMEx2blp0b1pObExoU3d2V2NDSWgyaEdYLWdGRmt6SUt1dkNPdmNMeVp4bHBvaWNIZ0NLYkdRWUxnelZ5clJaYi1JZGFLeHBYTjRfcGlfdWdVU2x0SU53YlZrdnpZOFJzUWxLSWxOUi1GUjRmYTBNZXhsbUVYZ1poSVdrY2d4MnhhczV2aEc1RXRHYWRQNkNFd3NkQ2s5N2ZsdEw?oc=5",
@@ -821,25 +710,6 @@
   "relevancia": "media"
  },
  {
-  "id": "ea0be6d73807ca34",
-  "titulo": "Com investimento de R$ 54,8 milhões, Paulínia recebe nova estação de tratamento de esgoto",
-  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWHlUc1hIUGFZUGhzRWVfcG93bFhjdmM5bG1ZQ2I2VTBIM1Rnb1ZjemtzMk9yT2dpdGE1eXZ6el9zMktOeDZLc3ljV0YyelJIMXhhZnI0T2tqdjlvM19va2JRb1dGQXZVT01hQUE3VExVeDVGRDdpU2gwMmtsX1RXNjdnN3NvVGNVdzh6QlhFVkViX0lOV2piNFRwZnpqeGg4cjJUTXJweGxnTm9ZQ2hhbDNpa1VuenR1Q3A1YQ?oc=5",
-  "fonte": "Portal ON",
-  "publicado": "2026-03-09T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:28.800408+00:00",
-  "resumo": "Com investimento de R$ 54,8 milhões, Paulínia recebe nova estação de tratamento de esgoto",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Outros",
-  "valores": [
-   "R$ 54,8 milhões"
-  ],
-  "valor_reais": 54800000.0,
-  "empregos": 0,
-  "pontuacao": 21,
-  "relevancia": "alta"
- },
- {
   "id": "c541c263ebe5c88f",
   "titulo": "Governo de SP inaugura maior planta de biometano do Brasil em Paulínia",
   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZnlxYW5Fa05xcEF2dHZKUTl6d2ltMG44bVFwOEJnTzF2RVhHOEdPZHBETEdoRjNRdjhOWkJ1STF2eTdkbmlsTGk3Zk5aSmFyVjVVWElEMzRhQk1RVWJZaHc3VnpmS1JEZkFMWDJjZ2xvTXQ0OW5sRDdyUldpMWltdzFCbTJxMmtvNGk4MjdYTG1fUjVYUnNDV2pUVklfRkNQZkhYTXhNQlp2d1hlSl9rQg?oc=5",
@@ -874,40 +744,6 @@
   "relevancia": "media"
  },
  {
-  "id": "61a0f35dc688fac2",
-  "titulo": "Justiça libera construção da terceira ponte do Rio Atibaia, em Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPaW82WjlJLUotVV9oajdYZmhNcTJmeEU4Ym96Ry03NWE4LWNLaXd1eFlwSTdSZHNTdzktQ2pCNkFSZ0NLYjBHWEdEUGNTWkVYUWhTUWtXbTNyTjl0WG10UmdWcU1FQUV5cUVGTGhZNk5jVFlRYUpTSVBKODVha29GR0R5Ym5RLTdCM0JPcWc2NEljVFR6dUJLTDFaSmx6QmU3UmJlcQ?oc=5",
-  "fonte": "TODODIA",
-  "publicado": "2026-02-12T08:00:00+00:00",
-  "coletado": "2026-10-21T18:57:31.413754+00:00",
-  "resumo": "Justiça libera construção da terceira ponte do Rio Atibaia, em Paulínia",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Outros",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
-  "id": "47465f5366d17da7",
-  "titulo": "Paulínia inaugura unidade da Faculdade de Tecnologia (Fatec)",
-  "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMDdnLUNHb2tiVTE4ZGxHc1Y2bG53UXZCODlEeUpvYVplcWlJRmpvaFdoNlROakFXYW1PS1NIazZxa3ZhUDhDN2VvZXFUdVd6RE1wRlg0d0RjdTVIZTIxUUFFOVcxTy1ObmdfLUhPdkZrdUdyZTNmVUN3NkdXQUhxbUpQVzlfc2xEM3B6Zzh6MkFkbWV1NXJUbQ?oc=5",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-02-07T08:00:00+00:00",
-  "coletado": "2026-10-21T18:57:31.706244+00:00",
-  "resumo": "Paulínia inaugura unidade da Faculdade de Tecnologia (Fatec)",
-  "empresa": "",
-  "tipo": "Início de operação",
-  "setor": "Tecnologia",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
   "id": "aaf9d1615fa8b42f",
   "titulo": "ICL passa a operar novo centro de distribuição em Paulínia",
   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNlpNU19FalR5Qk1sMGRheDFnN0dMV0VTamNod2ZiblRuUWNoTnVPNHdoTXp5U3F0eXhQNEJyZURFVUpobG1UQ2ZGVGtIeFlyM1UtYnRWMXE2dFV3UGpJMEVkQUkxaGlFRnNXLUxyS3FzekQ2ZzU2Q3lCMFNfbTBKQW1mQk5CaklnWU56Z2t5akN5MnJ3cVdyeFkxS1lPVzA?oc=5",
@@ -939,42 +775,6 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 15,
-  "relevancia": "media"
- },
- {
-  "id": "1b7c265161c5c210",
-  "titulo": "Paulínia inaugura escola de ensino integral para crianças em vulnerabilidade",
-  "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PNHNOaXdKbERYdGUxdDBKeXN4MlVieGt5cTg3LXlReE9PZ2RUaEJBbGdFaWwyS0s5ejIxNEROU29zVGYtTWN3QlpRQlhmWVF4M09wUzJ4TF9zbmlNQlkxbjc5amEtUWpvb3hIeXRHSW9ZNnJEVVVLYw?oc=5",
-  "fonte": "vtvnews.com.br",
-  "publicado": "2026-02-04T08:00:00+00:00",
-  "coletado": "2026-10-21T18:57:33.013776+00:00",
-  "resumo": "Paulínia inaugura escola de ensino integral para crianças em vulnerabilidade",
-  "empresa": "",
-  "tipo": "Início de operação",
-  "setor": "Saúde e Educação",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
-  "id": "33896215013882fb",
-  "titulo": "Projeto aprovado autoriza R$ 4,8 milhões e ar-condicionado em escolas de Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPT05QRGdDazZaRURHSEliSk53dGFjY0hpRDdCSHJ4Nkx5ZHFGU040eWtpcGE5Q2UxWmpXT00yR2FZSy1VTDc4NmctTTRtV0FfVnhDRXJlTEJmWDFvc3VpM0dYUThWRGwzempjX1dEZE5OMDk4amFrY3RFNHc4WFJyaDRJQXVpTFM3QUtmaXpHRmdVQU5ZZDFleGpScldBcWhHb2dJUmVFRk1zTF92Ym1sUVFVbmx1WmVOaDhxaA?oc=5",
-  "fonte": "Tribuna Liberal",
-  "publicado": "2026-01-06T08:00:00+00:00",
-  "coletado": "2026-10-21T18:57:35.207403+00:00",
-  "resumo": "Projeto aprovado autoriza R$ 4,8 milhões e ar-condicionado em escolas de Paulínia",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Saúde e Educação",
-  "valores": [
-   "R$ 4,8 milhões"
-  ],
-  "valor_reais": 4800000.0,
-  "empregos": 0,
-  "pontuacao": 6,
   "relevancia": "media"
  }
 ]

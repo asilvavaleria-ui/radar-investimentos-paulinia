@@ -190,6 +190,12 @@ TERMOS_EXCLUSAO = [
     "processo seletivo", "concurso", "inscricoes", "curso", "capacitacao", "estagio",
     "jovem aprendiz", "oportunidades de emprego", "feirao", "pat ", "seleciona", "contrata ",
     "cadastro reserva", "trabalhe conosco",
+    # obras e serviços públicos (o foco são empresas)
+    "escola", "creche", "fatec", "faculdade de tecnologia", "ubs", "ponte", "pavimentacao",
+    "recape", "ar-condicionado", "mobilidade urbana", "estacao de tratamento de esgoto",
+    "habitantes", "socioambient",
+    # investigações e fraudes
+    "operacao", "investiga", "fraude", "lavagem", "falsos", "receita mira",
     # segurança, esportes e entretenimento
     "homicidio", "assassin", "preso", "presa ", "prisao", "acidente", "incendio", "explosao",
     "morre", "morte", "roubo", "furto", "trafico", "tiroteio", "policia", "golpe",
