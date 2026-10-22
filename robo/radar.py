@@ -297,7 +297,9 @@ NAO_EMPRESA = {"paulinia", "prefeitura", "governo", "estado", "cidade", "regiao"
                "sp", "sao paulo", "campinas", "empresa", "multinacional", "nova", "novo", "projeto",
                "investimento", "o", "a", "os", "as", "em", "com", "setor", "industria", "polo",
                "lula", "presidente", "governador", "prefeito", "ministro", "secretaria", "refinaria",
-               "maior", "projeto", "obras", "diesel", "alcoolduto", "etanolduto"}
+               "maior", "projeto", "obras", "diesel", "alcoolduto", "etanolduto", "bom", "camara",
+               "vereadores", "vereador", "justica", "tj", "governo", "tarcisio", "ons",
+               "data", "anp", "cetesb", "mpt", "senai", "fatec", "hospital", "ubs"}
 
 
 def identificar_empresa(titulo, descricao, texto):
@@ -309,6 +311,10 @@ def identificar_empresa(titulo, descricao, texto):
         m = RE_EMPRESA_TEXTO.search(trecho or "")
         if m:
             candidatos.append(m.group(1))
+    titulo_n = normalizar(titulo)
+    for nome in config.EMPRESAS_CONHECIDAS:
+        if contem(titulo_n, nome):
+            candidatos.append(nome)
     for c in candidatos:
         c = c.strip(" .,-")
         if normalizar(c) not in NAO_EMPRESA and normalizar(c.split()[0]) not in NAO_EMPRESA and len(c) >= 2:
@@ -400,20 +406,27 @@ def resumo_ia(titulo, texto):
         return None
 
 
+def passa_triagem(titulo, descricao):
+    """Título/subtítulo precisam indicar um empreendimento de EMPRESA em Paulínia."""
+    titulo_n = normalizar(titulo)
+    if any(contem(titulo_n, t.strip(), inteiro=False) for t in config.TERMOS_EXCLUSAO):
+        return False
+    texto = normalizar(f"{titulo} {descricao}")
+    if not any(contem(texto, s, inteiro=False) for s in config.SINAIS_EMPREENDIMENTO):
+        return False
+    if identificar_empresa(titulo, descricao, ""):
+        return True
+    return any(contem(texto, t, inteiro=False) for t in config.TERMOS_EMPRESARIAIS)
+
+
 def analisar(item):
     titulo_n = normalizar(item["titulo"])
-    if any(contem(titulo_n, t.strip(), inteiro=False) for t in config.TERMOS_EXCLUSAO):
-        return None
-
     descricao = item["descricao"]
     if normalizar(descricao).startswith(titulo_n[:40]):
         descricao = ""  # o RSS do Google repete o título na descrição
 
-    # Sem sinal de empreendimento no título/subtítulo, nem vale a pena abrir a página.
-    def tem_sinal(*textos):
-        t = normalizar(" ".join(textos))
-        return any(contem(t, s, inteiro=False) for s in config.SINAIS_EMPREENDIMENTO)
-    if not tem_sinal(item["titulo"], descricao):
+    # Triagem pelo título/subtítulo: se não passar, nem vale a pena abrir a página.
+    if not passa_triagem(item["titulo"], descricao):
         return None
 
     url = link_real(item["link"])

@@ -1,39 +1,5 @@
 [
  {
-  "id": "b22c28117e80df83",
-  "titulo": "Paulínia inaugura novo Centro Oncológico e promove Circuito Saúde no Jardim Botânico",
-  "link": "https://noticiasdepaulinia.com.br/paulinia-inaugura-novo-centro-oncologico-e-promove-circuito-saude-no-jardim-botanico/",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-10-22T00:31:00+00:00",
-  "coletado": "2026-10-22T10:33:14.634145+00:00",
-  "resumo": "A campanha Outubro Rosa terá duas ações especiais em Paulínia nesta semana: a inauguração de um novo Centro Oncológico e a realização do Circuito Saúde no Jardim Botânico, com atividades gratuitas voltadas à prevenção, à conscientização sobre o câncer de mama e à promoção da saúde e do bem-estar da mulher. Na quinta-feira (22), às 14h, será inaugurado o novo Centro Oncológico do município.",
-  "empresa": "",
-  "tipo": "Início de operação",
-  "setor": "Saúde e Educação",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 10,
-  "relevancia": "media"
- },
- {
-  "id": "7601d5bbe55233c3",
-  "titulo": "Bom Prato de Sumaré vai abastecer novas unidades móveis em Nova Odessa e Paulínia",
-  "link": "https://sumare.portaldacidade.com/noticias/regiao/bom-prato-de-sumare-vai-abastecer-novas-unidades-moveis-em-nova-odessa-e-paulinia-1239",
-  "fonte": "Portal da Cidade - Sumaré / SP",
-  "publicado": "2026-10-19T12:12:00+00:00",
-  "coletado": "2026-10-21T19:33:30.330380+00:00",
-  "resumo": "Nova Odessa e Paulínia passarão a contar com o serviço Bom Prato Móvel, que oferecerá refeições completas por R$ 1, utilizando a estrutura de preparo de alimentos instalada em Sumaré. Paulínia anunciou a adesão ao Bom Prato Móvel, com previsão de oferecer 300 almoços por dia pelo valor de R$ 1. Emprega Paulínia anuncia 84 vagas de emprego com salários de até R$ 3,1 mil Sumaré participa de congresso internacional sobre resiliência climática Rov.",
-  "empresa": "",
-  "tipo": "Expansão",
-  "setor": "Infraestrutura Pública",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 84,
-  "pontuacao": 9,
-  "relevancia": "media"
- },
- {
   "id": "a98bc33dad05f0ad",
   "titulo": "ONS destina 228 MW da Rede Básica a três projetos de data centers em São Paulo",
   "link": "https://www.datacenterdynamics.com/br/not%C3%ADcias/ons-destina-228-mw-da-rede-b%C3%A1sica-a-tr%C3%AAs-projetos-de-data-centers-em-s%C3%A3o-paulo/",
@@ -52,27 +18,6 @@
   "outras_fontes": [
    "MegaWhat"
   ]
- },
- {
-  "id": "5de773dd20dfa92f",
-  "titulo": "Vereadores de Paulínia terão R$ 13,2 milhões em emendas impositivas para 2027",
-  "link": "https://noticiasdepaulinia.com.br/vereadores-de-paulinia-terao-r-132-milhoes-em-emendas-impositivas-para-2027/",
-  "fonte": "noticiasdepaulinia.com.br",
-  "publicado": "2026-10-11T10:46:07+00:00",
-  "coletado": "2026-10-21T19:33:35.576101+00:00",
-  "resumo": "Os 17 vereadores de Paulínia poderão indicar, juntos, até R$ 13.200.500,00 em emendas impositivas para execução em 2027. Cada parlamentar terá direito a indicar R$ 776.500,00, sendo que 50% desse montante deverá ser destinado obrigatoriamente à área da Saúde. Os recursos fazem parte do orçamento municipal e permitem que os vereadores indiquem investimentos e ações que consideram prioritários para a cidade.",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Saúde e Educação",
-  "valores": [
-   "R$ 13,2 milhões",
-   "R$ 13.200.500,00",
-   "R$ 776.500,00"
-  ],
-  "valor_reais": 13200500.0,
-  "empregos": 0,
-  "pontuacao": 9,
-  "relevancia": "alta"
  },
  {
   "id": "473a71c14ef8211d",
@@ -104,7 +49,7 @@
   "publicado": "2026-10-08T07:00:00+00:00",
   "coletado": "2026-10-21T18:56:22.943498+00:00",
   "resumo": "Diesel renovável de etanol vai sair de Paulínia: JetBio será a maior compradora de etanol do país, com 1,8 bilhão de litros por ano, e BNDES sinaliza US$ 500 milhões",
-  "empresa": "",
+  "empresa": "JetBio",
   "tipo": "Investimento anunciado",
   "setor": "Energia e Petróleo",
   "valores": [
@@ -245,23 +190,6 @@
   "relevancia": "media"
  },
  {
-  "id": "01e5851903fda2ec",
-  "titulo": "Paulínia adere ao Programa Município Global para impulsionar investimentos e geração de empregos",
-  "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTktXVmVQRnBOVzV1eFJFQzVSa29Oek1ZaTNHNjZFZUhkMlJuU2JjTE85MklLbzZpZGwyUkttdmJCVFk2ZUhlc1RNWktkYnB5ZU1mbzNfNDVuRjNCNkd6Q2tqYzNzSjRvM290MkUzTEVhUkE3bTR5MlBqTWhoajc0ZDN5MmtTQ3BKR2lHSUQ4SDhXamNKbENUYmowN0dFTmJUbEVkaHZydnRiNks4T1B2T0J2Yk5nLXl5emlDdS1MQjRJRnUtbzJJYXFR?oc=5",
-  "fonte": "Portal ON",
-  "publicado": "2026-07-05T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:49.518503+00:00",
-  "resumo": "Paulínia adere ao Programa Município Global para impulsionar investimentos e geração de empregos",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Outros",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
   "id": "d725d6a0dcc3606e",
   "titulo": "JetBio garante área em Paulínia (SP) para construir planta de SAF a partir de etanol",
   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNT2w4a3k1eThsakZyMFgwSkRNQThOTkQxRFhFQ3prdXNkazZlbWhJSXJQTDVDZ3FOYTZXdG5pUncxWW44b3dlR2JHc2VQb1FUQnc4cDdnTVVpdUJ1SmJPWEMxMzB5ZFhkbnp6b3llOF9OSlZfbExPcG1HcHdXOXpJXzVPcWt1NW9pbnFaZXBvVzFFbTM1YnpGeDJVS1hGajk1TTdrNG5kSEx1bjBW?oc=5",
@@ -283,25 +211,6 @@
   ]
  },
  {
-  "id": "fd1df354e33d9b44",
-  "titulo": "Projeto voltado à coleta de óleo usado prevê investimento de até R$ 6 milhões em Paulínia",
-  "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNFN3QmxsSVk2WXRFM2oyUklxWUJtb0pPbFBPQ20yYXVyaWs3UlVSWkpjWUVrckl3bUR6dmxjYkt6akQwT1Q0WjJNRktyaFFSaEhVSlJlTzRBMjZsNFBfR1pTaVliTElpUHIxTWFMUDFnSlBKUzhHc2dKUGpGLXNSd0xZQV9RNkNJT080NFM4aHU2VjlYM1RNSGdZQnJST3ZwLVI5Mm0zbEpVWVhUdWRuRE9JTTlGUDgzR1oyaTM4dw?oc=5",
-  "fonte": "Portal ON",
-  "publicado": "2026-06-08T07:00:00+00:00",
-  "coletado": "2026-10-21T18:56:52.709782+00:00",
-  "resumo": "Projeto voltado à coleta de óleo usado prevê investimento de até R$ 6 milhões em Paulínia",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Outros",
-  "valores": [
-   "R$ 6 milhões"
-  ],
-  "valor_reais": 6000000.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "media"
- },
- {
   "id": "4f0eeb2644982164",
   "titulo": "Lula visita Replan em Paulínia e Petrobras anuncia R$ 37 bilhões em investimentos até 2030",
   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNzEtckpQVkt4VjMyb1N1ZF84LV9HZlVGOVJFMGJsMnM4c185SXBVRTBDU0QxTnlBNmFDM0xaSlE4ZXlOeWNjc3dEVkNybDlKYW9ZODhsNl90X3hOTEUtem92T01YQVVIUDJjbnJWUHZ3QWVfZ3F3VHVoNVplRzNma0thMG1GRUNycWs4M1JJMU1XbVo2WUZXbmswOHNfSkg0MTJnakhSUlJCQ29sM1ppUGNoalNhZVBneU1YdHJhRWxrUXZEamJMdjhR?oc=5",
@@ -309,7 +218,7 @@
   "publicado": "2026-05-18T16:33:20+00:00",
   "coletado": "2026-10-21T18:57:03.096655+00:00",
   "resumo": "Lula visita Replan em Paulínia e Petrobras anuncia R$ 37 bilhões em investimentos até 2030",
-  "empresa": "",
+  "empresa": "Petrobras",
   "tipo": "Investimento anunciado",
   "setor": "Energia e Petróleo",
   "valores": [
@@ -325,23 +234,6 @@
   ]
  },
  {
-  "id": "77eeaf8ab9601fc6",
-  "titulo": "Lula anuncia investimentos em visita a Campinas e Paulínia nesta segunda-feira",
-  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPb3Rxd2RPRnpqdnY0UTVYczNCTWhldGdENmNpbmRQemdpVFZ0V2ozblpjN0xWNWUxUXd6S1BaWTRhNFFUU1k5M1dfV1EzYk53Z0RJQXJHcEJBd3JRMlVud2JJWEVGYTE5cnExOU5mVmNkdy0zTDB0VExtWDlXTDMtRXlyU0JvcHpIQTB1emxvdVBPeF9oX19heERzdDVrNzI3d3ZmMm9IY2ZCOHM?oc=5",
-  "fonte": "Hora Campinas",
-  "publicado": "2026-05-18T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:03.682273+00:00",
-  "resumo": "Lula anuncia investimentos em visita a Campinas e Paulínia nesta segunda-feira",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Outros",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 6,
-  "relevancia": "media"
- },
- {
   "id": "be2eb8629733e10c",
   "titulo": "Presidente Lula anuncia investimento de R$ 6 bilhões na Replan para modernização e ampliação da produção em Paulínia",
   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMDRpQU1fOTJwNlVDRTdhc0RtclJ2aWV4aDI1VlhvZThEYmZhMEJJTFZZcnlnaVRZWkNvSVdsa3pBUHkwOEIzWDljZmQwc1RWMlVRUHpKN2loR000UVFPY0dHcURSUWdtc3hkaUVIM0h2MEFnU0ZITTFIREhTV1lYU2RoZUMwYlpkWmN5R24yY0hSakxSVGhhSHp4d3M0ZlZTUVd3aHhsZG9lejhDcl9WNHludGpGUTdLSi11eDFjOGJjUzFqYnJWTDdtZDlqX3RFSkstWERadnNzOUJqS1lWTzJBVFM?oc=5",
@@ -349,7 +241,7 @@
   "publicado": "2026-05-18T07:00:00+00:00",
   "coletado": "2026-10-21T18:57:03.992189+00:00",
   "resumo": "Presidente Lula anuncia investimento de R$ 6 bilhões na Replan para modernização e ampliação da produção em Paulínia",
-  "empresa": "",
+  "empresa": "Replan",
   "tipo": "Expansão",
   "setor": "Energia e Petróleo",
   "valores": [
@@ -430,25 +322,6 @@
   "valor_reais": 22000000000.0,
   "empregos": 0,
   "pontuacao": 9,
-  "relevancia": "alta"
- },
- {
-  "id": "4d09492f6391edc4",
-  "titulo": "Obras na Rodovia Zeferino Vaz avançam entre Paulínia e Campinas com investimento de R$ 180 milhões",
-  "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOb0RUUTlXaVhURzJTT0tBa3RBSGFoN21VUXJxOUtPbnp4R0MxOTdoMUtJaGh5R1lJdnBpaXhSQWs2TVM0ZWZGOGNsVEQ2MzVKOS04RGc5ZzNYbjdqVzkxa2ktRTNaRGRsbHBrT1dqYzZwWkM5M2FPX3V0SHVGTVB6WHlvYmhsZ1FqSVdvY3V2aWlmSG1lMlRwcS1TNFdLMjFrWUY1YXo3QWp5WU9MSkRnZTJwZnAwcU91TnBpNm9nMDBkYnppTXNJeU0xMA?oc=5",
-  "fonte": "Portal ON",
-  "publicado": "2026-04-27T07:00:00+00:00",
-  "coletado": "2026-10-21T18:57:17.144719+00:00",
-  "resumo": "Obras na Rodovia Zeferino Vaz avançam entre Paulínia e Campinas com investimento de R$ 180 milhões",
-  "empresa": "",
-  "tipo": "Investimento anunciado",
-  "setor": "Logística",
-  "valores": [
-   "R$ 180 milhões"
-  ],
-  "valor_reais": 180000000.0,
-  "empregos": 0,
-  "pontuacao": 24,
   "relevancia": "alta"
  },
  {

@@ -70,6 +70,27 @@ CONSULTAS = [
     '"Paulínia" inicia construção unidade',
     '"Paulínia" obras unidade industrial',
     '"Paulínia" inaugura nova fábrica',
+
+    # Comércio, serviços e outros empreendimentos privados
+    '"Paulínia" supermercado inaugura unidade',
+    '"Paulínia" atacadista nova loja',
+    '"Paulínia" shopping hotel empreendimento',
+    '"Paulínia" hospital privado novo',
+
+    # Energia, terminais e infraestrutura privada
+    '"Paulínia" terminal ampliação capacidade',
+    '"Paulínia" hub logístico combustíveis',
+    '"Paulínia" subestação energia empresa',
+    '"Paulínia" usina biometano biogás',
+    '"Paulínia" reciclagem economia circular planta',
+    '"Paulínia" modernização retrofit planta',
+    '"Paulínia" entra em operação usina',
+
+    # Pesquisa, financiamento e licenças
+    '"Paulínia" centro de pesquisa P&D',
+    '"Paulínia" BNDES financiamento',
+    '"Paulínia" licença ambiental empreendimento',
+    '"Paulínia" condomínio industrial parque industrial',
 ]
 
 # Sites que recebem uma busca dedicada (Google Notícias com "site:").
@@ -119,13 +140,44 @@ FEEDS_EXTRAS = [
 # A notícia só é aceita se o TÍTULO ou o SUBTÍTULO tiver ao menos um destes
 # sinais de empreendimento (comparação pelo início da palavra).
 SINAIS_EMPREENDIMENTO = [
-    "invest", "aporte", "planta", "fabrica", "unidade", "laboratorio", "centro de distribuicao",
-    "centro logistico", "condominio logistico", "galpao", "data center", "datacenter",
-    "construcao", "construir", "constroi", "obras", "instala", "implanta", "expansao", "expande",
-    "amplia", "nova sede", "nova operacao", "passa a operar", "inaugura", "terreno", "area",
-    "duto", "usina", "refinaria", "biorrefinaria", "complexo", "milhoes", "milhao", "bilhoes",
-    "bilhao", "investment", "plant", "facility", "expansion",
+    "investimento", "invest", "aporte", "novo empreendimento", "empreendimento", "novo projeto",
+    "nova unidade", "unidade", "nova planta", "planta", "nova fabrica", "fabrica", "implantacao",
+    "implanta", "instalacao", "instala", "expansao", "expande", "ampliacao", "amplia",
+    "modernizacao", "retrofit", "construcao", "construir", "constroi", "obras", "terreno",
+    "aquisicao de area", "area", "centro de distribuicao", "centro logistico", "terminal",
+    "armazem", "armazenagem", "galpao", "data center", "datacenter", "centro de dados",
+    "centro de pesquisa", "centro de excelencia", "pesquisa e desenvolvimento", "p&d",
+    "laboratorio", "centro tecnologico", "inovacao industrial", "transferencia de unidade",
+    "transferencia de centro", "capacidade de energia", "acesso a rede", "rede de transmissao",
+    "subestacao", "geracao de energia", "energia renovavel", "biometano", "biogas", "saf",
+    "hidrogenio", "etanol", "biodiesel", "quimica", "petroquimica", "fertilizantes", "reciclagem",
+    "economia circular", "tratamento de residuos", "saneamento", "farmaceutica", "alimentos",
+    "hospital", "hotel", "shopping", "supermercado", "atacadista", "varejo", "loja",
+    "condominio industrial", "condominio logistico", "parque industrial", "loteamento empresarial",
+    "infraestrutura", "concessao", "financiamento", "bndes", "incentivo", "licenca ambiental",
+    "licenciamento ambiental", "aprovacao", "autorizacao", "inaugura", "entra em operacao",
+    "entrada em operacao", "passa a operar", "capacidade produtiva", "aumento de producao",
+    "empregos", "postos de trabalho", "milhoes", "milhao", "bilhoes", "bilhao", "duto", "usina",
+    "refinaria", "biorrefinaria", "hub", "projeto", "parceria", "eletrificacao", "investment",
+    "plant", "facility", "expansion",
 ]
+
+# Além do sinal acima, a notícia precisa envolver uma EMPRESA ou um EMPREENDIMENTO
+# PRIVADO. Se o robô não reconhecer o nome de uma empresa no título, um destes
+# termos precisa aparecer no título ou no subtítulo.
+TERMOS_EMPRESARIAIS = [
+    "empresa", "companhia", "multinacional", "grupo", "joint venture", "fabricante", "startup",
+    "industria", "industrial", "planta", "fabrica", "usina", "biorrefinaria", "refinaria",
+    "replan", "terminal", "hub", "armazem", "armazenagem", "galpao", "centro de distribuicao",
+    "centro logistico", "condominio industrial", "condominio logistico", "parque industrial",
+    "loteamento empresarial", "data center", "datacenter", "centro de dados", "centro de pesquisa",
+    "centro tecnologico", "laboratorio", "p&d", "subestacao", "duto", "etanolduto", "alcoolduto",
+    "alcooduto", "ferrovia", "supermercado", "atacadista", "atacarejo", "shopping", "hotel",
+    "rede varejista", "varejista", "loja", "hospital privado", "bndes", "investidores", "zpe",
+    "biometano", "biogas", "saf", "biodiesel", "hidrogenio", "petroquimica", "fertilizantes",
+    "eletrificacao",
+]
+
 
 # Pontuação: peso 2 = sinal forte; peso 1 = sinal fraco.
 TERMOS_INVESTIMENTO = {
@@ -194,12 +246,36 @@ TERMOS_EXCLUSAO = [
     "escola", "creche", "fatec", "faculdade de tecnologia", "ubs", "ponte", "pavimentacao",
     "recape", "ar-condicionado", "mobilidade urbana", "estacao de tratamento de esgoto",
     "habitantes", "socioambient", "recorde", "melhor julho", "melhor mes", "producao de derivados",
-    # investigações e fraudes
-    "operacao", "investiga", "fraude", "lavagem", "falsos", "receita mira",
+    "maior volume", "dia da industria", "aniversario",
+    # investigações, fiscalização e Justiça
+    "operacao policial", "operacao contra", "deflagra", "mandados", "pcc", "investiga", "fraude",
+    "lavagem", "falsos", "receita mira", "adulterad", "apreende", "desviado", "fiscalizacao",
+    "justica", "tj-sp", "tribunal", "mpt", "ministerio publico", "acao civil",
+    # poder público, política e finanças municipais
+    "vereador", "camara de paulinia", "camara municipal", "emenda", "orcamento", "icms", "repasse",
+    "imposto", "iss ", "taxa de", "pre-candidato", "deputado", "eleic", "candidat",
+    "guarda civil", "plano de carreira", "municipio global",
+    # saúde pública e assistência social
+    "hospital municipal", "pronto atendimento", "sus", "centro oncologico", "outubro rosa",
+    "novembro azul", "campanha", "circuito saude", "saude da mulher", "bom prato", "refeicoes",
+    "moradias populares", "minha casa", "habitacional", "idosos", "violencia",
+    "cursos gratuitos", "iluminacao publica", "bloqueio", "interdicao", "transito",
     # segurança, esportes e entretenimento
     "homicidio", "assassin", "preso", "presa ", "prisao", "acidente", "incendio", "explosao",
     "morre", "morte", "roubo", "furto", "trafico", "tiroteio", "policia", "golpe",
     "futebol", "campeonato", "novela", "horoscopo", "previsao do tempo", "show", "festival",
+]
+
+# Empresas que, citadas no título, já indicam notícia empresarial (e aparecem
+# como "empresa" no e-mail e no painel). Acrescente outras quando quiser.
+EMPRESAS_CONHECIDAS = [
+    "Petrobras", "Replan", "Braskem", "Shell", "Raízen", "Vibra", "Ipiranga", "Ultracargo", "bp",
+    "Ultragaz", "Opla", "Cofco", "Inpasa", "JetBio", "CloudHQ", "Onebio", "Orizon", "ComBio",
+    "Rhodia", "Solvay", "Syngenta", "BASF", "Bayer", "Boehringer Ingelheim", "Yara", "Zaraplast",
+    "ICL", "Galvani", "SNF", "Covabra", "Renner", "Sabesp", "CPFL", "Comgás", "Rumo", "VLI",
+    "Bravo Logística", "Transpetro", "Raizen", "Ecopetrol", "Mosaic", "Cargill", "Bunge",
+    "Amazon", "Mercado Livre", "Magalu", "GLP", "Log CP", "Prologis", "Scala", "Ascenty",
+    "Equinix", "Odata", "Elea",
 ]
 
 # ---------------------------------------------------------------------------
