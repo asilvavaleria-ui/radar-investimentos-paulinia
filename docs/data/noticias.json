@@ -34,7 +34,8 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 6,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": []
  },
  {
   "id": "473a71c14ef8211d",
@@ -159,6 +160,23 @@
   "relevancia": "media"
  },
  {
+  "id": "86d7d06345305d9e",
+  "titulo": "Unilever passa a mover a maior fábrica de desodorantes da América Latina com gás de um aterro em Paulínia",
+  "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOeVRfeHN4akpwUFhEMTJDVl9Yanc5UU5mVEMzcXlVUXdLSC1TaWF0dHVWTEFmWjZnVndHZDlGTEFWZ010WW9CVFhETlc4SnltR3hPdi14VnlBNFo3bThDYnFYS0hQd09weW9DR0ZLVnFoZHRWSEQ3T1dRMy10MzFyY05tZ2s0V192T3BmY1VFOFhGdm52bDBmQlJhUVZvcV9UcEpHYmJ6YWgyUTZCak1sVklsc2xIeE1ROVZzam8xTVE0NXR0bGVBS2tfYWpiV0Q5MDdj?oc=5",
+  "fonte": "Neo Mondo",
+  "publicado": "2026-09-07T07:00:00+00:00",
+  "coletado": "2026-10-22T12:09:13.723073+00:00",
+  "resumo": "Unilever passa a mover a maior fábrica de desodorantes da América Latina com gás de um aterro em Paulínia",
+  "empresa": "Unilever",
+  "tipo": "Outros sinais",
+  "setor": "Indústria",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 3,
+  "relevancia": "media"
+ },
+ {
   "id": "ee57a79f57c9c21b",
   "titulo": "Ultragaz inaugura estação de biometano para abastecer frota pesada em Paulínia (SP)",
   "link": "https://veja.abril.com.br/economia/ultragaz-abre-estacao-propria-de-biometano-para-abastecer-ate-200-caminhoes-por-dia/",
@@ -177,8 +195,27 @@
   "outras_fontes": [
    "Exame",
    "Folha de S.Paulo",
-   "Agência eixos"
+   "Agência eixos",
+   "AutoIndústria",
+   "VEJA"
   ]
+ },
+ {
+  "id": "8b7eb10197dafd89",
+  "titulo": "Grupo Zaraplast estreia no setor químico com compra de fábrica da Yara em Paulínia",
+  "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcWZzYUxDZ2tLOUFFNnBjOHV3TmZ1VlBQR1pQZm5HOUFYLUhvZFJnV2hFdEszckRvejNFWXlQZ1lCd09ZeHdXRXd2VGo0Nl9wZnp0SHJmR0lEUlBKR3ZUUk9vR1Y2dUlKYWNlXzVoTnBwOUF6MG5tcnF1YlVrXzBBV09seVdQaTR4UnE4YUx0bVQzZTVXSnJ5UkpvOVEtdFNqdm9EOFNYRHdKUjdSVld3TmpB?oc=5",
+  "fonte": "AMR Business Intelligence",
+  "publicado": "2026-08-06T07:00:00+00:00",
+  "coletado": "2026-10-22T12:09:16.359263+00:00",
+  "resumo": "Grupo Zaraplast estreia no setor químico com compra de fábrica da Yara em Paulínia",
+  "empresa": "Yara",
+  "tipo": "Outros sinais",
+  "setor": "Indústria",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 3,
+  "relevancia": "media"
  },
  {
   "id": "8c8b7cba1e5b4f0b",
@@ -202,6 +239,23 @@
   ]
  },
  {
+  "id": "1cc7acff17943b8b",
+  "titulo": "Fábrica de ácido sulfúrico em Paulínia é vendida e terá linha de produção reativada",
+  "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQ1FsbVZkdHBBQkpBcXI0VEcyWkdHeUYwVFhwVHE2U0hYWVVsNm5jVDNzUmR2cU1FUUJoT3dVUWhtUW1XZlI3SFpyRXlDWG8xT0pKcGxLanNDS3hkcFBZaURvM1AzbVZqOG9jQzVXZGpTMEg0bGlwTUtubmJldDBDa0gzRVBidDZFMHEtT0FEak9mQjBBUThRMVo4dnNpajNfdHF0NDlmVVFJU3l6OElHdTV1eDdKZ0hqMjAzdU85T1RpSjJDUmZHbtIBzgFBVV95cUxNd2MzVFZ3RkM3X0ttUVI5TnZqWGs5TndSY3F4UU1LWjQ1TjVXRjV1MXVPemw0MnN3QldJU1c5Tkw1WnFTa2RLRHh4WnlWN29pTDRYd1FaaDJiUENoMWhlaGtjbmJRSk0xZDdCSjdacWxwVDJ4RzdHeTJhemxBQTY4UkpRSDFHVC1teGFmcEpaRGc2MjZ0eFJFOVNHQnJIU3o2blk3LS1aZHFzbWJ0LUtXb1BWc2xfY2JPMzA3Rk9iQ0dnSGdLV0dlM0VKR2g1QQ?oc=5",
+  "fonte": "ACidade ON",
+  "publicado": "2026-08-05T07:00:00+00:00",
+  "coletado": "2026-10-22T12:09:16.835722+00:00",
+  "resumo": "Fábrica de ácido sulfúrico em Paulínia é vendida e terá linha de produção reativada",
+  "empresa": "",
+  "tipo": "Outros sinais",
+  "setor": "Indústria",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 3,
+  "relevancia": "media"
+ },
+ {
   "id": "46b1543a2f803828",
   "titulo": "Yara negocia venda de fábrica de ácido sulfúrico em Paulínia",
   "link": "https://oglobo.globo.com/blogs/capital/post/2026/08/gigante-norueguesa-vende-fabrica-de-acido-sulfurico-em-paulinia-sp-a-zaraplast.ghtml",
@@ -220,6 +274,40 @@
   "outras_fontes": [
    "O GLOBO"
   ]
+ },
+ {
+  "id": "a00bc8073824103c",
+  "titulo": "Terminal de combustíveis amplia capacidade e logística em Paulínia",
+  "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNallDUjNIR1VHVGVndURNN3EtMVE2LTZTQTllVm5SMV9pOW5oWmkwelhzcmQxV2ZSTkpMUnhhNlZPMzJ1RWhQZS1ZczZlU2tQMEx4cFVVMEFxTmFxMnNNMmZpV0ExdlA4Y01Ld3VMaVJuZUM2RFhQXzN3ZjhUczdsOE5NazNlSHN4U093WXdSRV9QdjRSM1pEUU1yTkdpQm1ZQnlFX2psWG9nNUZDejFJUEIyTk04TVIyalZwYjZvOGpNX2wtTnBLQWM1bzZIbXYyTXNnemtfemozdXF1aWlvRWpBdDcwcHBLX19SNHB2UXY4alljN3VKSlJKOA?oc=5",
+  "fonte": "www.correiodamanha.com.br",
+  "publicado": "2026-07-14T07:00:00+00:00",
+  "coletado": "2026-10-22T12:09:17.731754+00:00",
+  "resumo": "Terminal de combustíveis amplia capacidade e logística em Paulínia",
+  "empresa": "",
+  "tipo": "Expansão",
+  "setor": "Energia e Petróleo",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 3,
+  "relevancia": "media"
+ },
+ {
+  "id": "7dd60cebba418f2e",
+  "titulo": "Joint venture de bp e Ultracargo amplia terminal em Paulínia",
+  "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeDhnX1pFQ296emFSM1RHMGdlNFI3OUVlaWlBUDBuTHM1OGJfNjhlTUNMaVZPN2NDVTVtT3NlT2NWOW1rUTRFMmNvSGpxclFwUk9yTkJNODhhUUgwU2hlWHpnaFRNa1VZWlZramZUZkY4a3gwUTY0Y1Rtc200MjIwVEgyN2NPM085ck5LN1ZfaVVwZGc?oc=5",
+  "fonte": "Portal BE News",
+  "publicado": "2026-07-13T07:00:00+00:00",
+  "coletado": "2026-10-22T12:09:18.620544+00:00",
+  "resumo": "Joint venture de bp e Ultracargo amplia terminal em Paulínia",
+  "empresa": "Ultracargo",
+  "tipo": "Expansão",
+  "setor": "Outros",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 3,
+  "relevancia": "media"
  },
  {
   "id": "c8a4b87572cff9bc",
@@ -293,7 +381,11 @@
    "Vermelho",
    "Correio Braziliense",
    "Valor Econômico",
-   "CNN Brasil"
+   "CNN Brasil",
+   "Portal ON",
+   "Blog do Esmael",
+   "Times Brasil | CNBC",
+   "TV Jaguari"
   ]
  },
  {
@@ -314,6 +406,23 @@
   "empregos": 0,
   "pontuacao": 30,
   "relevancia": "alta"
+ },
+ {
+  "id": "268609f4066f58d5",
+  "titulo": "Presidente Lula cumpre agenda na Refinaria de Paulínia nesta segunda-feira (18)",
+  "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOUXpNN1R4R1gtcnRFeDZ0aGxUc0w4V0F5cVJBamZXTHd6RlVVOWRFY1NJc19XU3lrVDlyZC1MR3JlN1p3MWtkRXlqX2JubUl3bU8yaS1EanZLam5WUDQzdzJBMTVBaS13U0FQYUV4Z3FTQm9rWXJwMlFLN2pXczVKRExGZjdOMUpTa1ZXUUx2R3J2UXp4dlhSekM5dTJXSFJUX2JKVkdRS2Z0Rk9QX3BTRGlkVU1VR0hIT1E?oc=5",
+  "fonte": "TODODIA",
+  "publicado": "2026-05-16T19:35:06+00:00",
+  "coletado": "2026-10-22T12:09:26.278646+00:00",
+  "resumo": "Presidente Lula cumpre agenda na Refinaria de Paulínia nesta segunda-feira (18)",
+  "empresa": "",
+  "tipo": "Outros sinais",
+  "setor": "Energia e Petróleo",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 3,
+  "relevancia": "media"
  },
  {
   "id": "f74001e762fd8473",
