@@ -230,7 +230,8 @@ TERMOS_INVESTIMENTO.update({
 })
 
 # Pontuação mínima para a notícia ser aceita.
-PONTUACAO_MINIMA = 6
+# (Baixa de propósito: a triagem por empresa/empreendimento já elimina o ruído.)
+PONTUACAO_MINIMA = 3
 # Pontuação a partir da qual a notícia é marcada como "alta relevância".
 PONTUACAO_ALTA = 16
 

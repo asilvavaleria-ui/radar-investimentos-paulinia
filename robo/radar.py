@@ -90,7 +90,10 @@ def agora():
 # ---------------------------------------------------------------------------
 def url_google(consulta):
     # O filtro "when:" do Google só é útil para períodos curtos; acima disso, o corte é feito depois.
-    periodo = f" when:{config.DIAS_RETROATIVOS}d" if config.DIAS_RETROATIVOS <= 30 else ""
+    if config.DIAS_RETROATIVOS <= 30:
+        periodo = f" when:{config.DIAS_RETROATIVOS}d"
+    else:
+        periodo = f" after:{(agora() - timedelta(days=config.DIAS_RETROATIVOS)):%Y-%m-%d}"
     q = quote_plus(f"{consulta}{periodo}")
     return f"https://news.google.com/rss/search?q={q}&hl=pt-BR&gl=BR&ceid=BR:pt-419"
 
