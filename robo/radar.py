@@ -315,9 +315,10 @@ def identificar_empresa(titulo, descricao, texto):
         if m:
             candidatos.append(m.group(1))
     titulo_n = normalizar(titulo)
-    for nome in config.EMPRESAS_CONHECIDAS:
-        if contem(titulo_n, nome):
-            candidatos.append(nome)
+    # empresas conhecidas, na ordem em que aparecem no título
+    achadas = [(titulo_n.find(normalizar(nome)), nome) for nome in config.EMPRESAS_CONHECIDAS
+               if contem(titulo_n, nome)]
+    candidatos += [nome for _, nome in sorted(achadas)]
     for c in candidatos:
         c = c.strip(" .,-")
         if normalizar(c) not in NAO_EMPRESA and normalizar(c.split()[0]) not in NAO_EMPRESA and len(c) >= 2:

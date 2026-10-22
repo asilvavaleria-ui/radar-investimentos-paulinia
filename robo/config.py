@@ -247,7 +247,7 @@ TERMOS_EXCLUSAO = [
     "escola", "creche", "fatec", "faculdade de tecnologia", "ubs", "ponte", "pavimentacao",
     "recape", "ar-condicionado", "mobilidade urbana", "estacao de tratamento de esgoto",
     "habitantes", "socioambient", "recorde", "melhor julho", "melhor mes", "producao de derivados",
-    "maior volume", "dia da industria", "aniversario",
+    "maior volume", "dia da industria", "aniversario", "cumpre agenda", "agenda",
     # investigações, fiscalização e Justiça
     "operacao policial", "operacao contra", "deflagra", "mandados", "pcc", "investiga", "fraude",
     "lavagem", "falsos", "receita mira", "adulterad", "apreende", "desviado", "fiscalizacao",
@@ -276,7 +276,7 @@ EMPRESAS_CONHECIDAS = [
     "ICL", "Galvani", "SNF", "Covabra", "Renner", "Sabesp", "CPFL", "Comgás", "Rumo", "VLI",
     "Bravo Logística", "Transpetro", "Raizen", "Ecopetrol", "Mosaic", "Cargill", "Bunge",
     "Amazon", "Mercado Livre", "Magalu", "GLP", "Log CP", "Prologis", "Scala", "Ascenty",
-    "Equinix", "Odata", "Elea",
+    "Equinix", "Odata", "Elea", "Unilever",
 ]
 
 # ---------------------------------------------------------------------------
