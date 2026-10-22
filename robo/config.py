@@ -87,6 +87,42 @@ CONSULTAS = [
     '"Paulínia" entra em operação usina',
 
     # Pesquisa, financiamento e licenças
+    '"Paulínia" centro de excelência multinacional',
+    '"Paulínia" transfere centro de pesquisa',
+    '"Paulínia" centro de inovação empresa',
+    '"Paulínia" centro tecnológico multinacional',
+
+    # Termos amplos (a triagem por empresa/empreendimento elimina o ruído)
+    '"Paulínia" multinacional anuncia',
+    '"Paulínia" multinacional transfere',
+    '"Paulínia" empresa transfere operação',
+    '"Paulínia" empresa escolhe',
+    '"Paulínia" empresa inaugura',
+    '"Paulínia" empresa amplia',
+    '"Paulínia" companhia investe',
+    '"Paulínia" grupo investe',
+    '"Paulínia" nova sede empresa',
+    '"Paulínia" centro global',
+    '"Paulínia" inovação indústria',
+    '"Paulínia" tecnologia nova unidade',
+    '"Paulínia" produção nacional fábrica',
+    '"Paulínia" nacionaliza produção',
+    '"Paulínia" capacidade instalada',
+    '"Paulínia" aquisição fábrica',
+    '"Paulínia" compra unidade industrial',
+    '"Paulínia" joint venture',
+    '"Paulínia" parceria industrial',
+
+    # Comunicados em inglês (multinacionais)
+    '"Paulinia" Brazil investment',
+    '"Paulinia" Brazil new plant',
+    '"Paulinia" Brazil expansion',
+    '"Paulinia" Brazil facility',
+    '"Paulinia" Brazil center of excellence',
+    '"Paulinia" Brazil technology center',
+    '"Paulinia" Brazil innovation center',
+    '"Paulinia" Brazil acquisition',
+    '"Paulinia" Brazil opens',
     '"Paulínia" centro de pesquisa P&D',
     '"Paulínia" BNDES financiamento',
     '"Paulínia" licença ambiental empreendimento',
@@ -123,10 +159,68 @@ SITES_PRIORITARIOS = [
     "datacenterdynamics.com",
     "datacenterdynamics.com.br",
 
+    # Comunicados oficiais de empresas
+    "prnewswire.com",
+    "businesswire.com",
+    "clickpetroleoegas.com.br",
+
     # Investimento e desenvolvimento econômico
     "investe.sp.gov.br",
     "saopaulo.sp.gov.br",
     "paulinia.sp.gov.br",
+]
+
+# Sites oficiais de empresas com operação (ou interesse) em Paulínia e de
+# agências de comunicados. Cada um recebe uma busca dedicada com "site:".
+SITES_EMPRESAS = [
+    # Agências de comunicados corporativos
+    "prnewswire.com",
+    "businesswire.com",
+    "segs.com.br",
+    "maxpress.com.br",
+    "dino.com.br",
+    "revistafator.com.br",
+
+    # Química, petroquímica e celulose
+    "braskem.com",
+    "solenis.com",
+    "basf.com",
+    "solvay.com",
+    "syensqo.com",
+    "dow.com",
+    "clariant.com",
+    "ingredion.com",
+    "ashland.com",
+    "revistaopapel.org.br",
+    "celuloseonline.com.br",
+
+    # Agro, fertilizantes e farmacêutica
+    "syngenta.com.br",
+    "corteva.com.br",
+    "bayer.com.br",
+    "yara.com.br",
+    "icl-group.com",
+    "galvani.com.br",
+    "boehringer-ingelheim.com",
+
+    # Energia, combustíveis e logística
+    "agencia.petrobras.com.br",
+    "ultra.com.br",
+    "ultracargo.com.br",
+    "ultragaz.com.br",
+    "raizen.com.br",
+    "shell.com.br",
+    "vibraenergia.com.br",
+    "transpetro.com.br",
+    "orizon.com.br",
+    "inpasa.com.br",
+    "cofcointernational.com",
+
+    # Bens de consumo, varejo e data centers
+    "unilever.com.br",
+    "kimberly-clark.com",
+    "cloudhq.com",
+    "ascenty.com",
 ]
 
 # Feeds RSS adicionais (portais locais, órgãos públicos). Opcional.
@@ -148,7 +242,8 @@ SINAIS_EMPREENDIMENTO = [
     "armazem", "armazenagem", "galpao", "data center", "datacenter", "centro de dados",
     "centro de pesquisa", "centro de excelencia", "pesquisa e desenvolvimento", "p&d",
     "laboratorio", "centro tecnologico", "inovacao industrial", "transferencia de unidade",
-    "transferencia de centro", "capacidade de energia", "acesso a rede", "rede de transmissao",
+    "transferencia de centro", "transfere", "transferiu", "centro global", "centro de inovacao",
+    "pesquisa", "tecnologia", "capacidade de energia", "acesso a rede", "rede de transmissao",
     "subestacao", "geracao de energia", "energia renovavel", "biometano", "biogas", "saf",
     "hidrogenio", "etanol", "biodiesel", "quimica", "petroquimica", "fertilizantes", "reciclagem",
     "economia circular", "tratamento de residuos", "saneamento", "farmaceutica", "alimentos",
@@ -160,6 +255,10 @@ SINAIS_EMPREENDIMENTO = [
     "empregos", "postos de trabalho", "milhoes", "milhao", "bilhoes", "bilhao", "duto", "usina",
     "refinaria", "biorrefinaria", "hub", "projeto", "parceria", "eletrificacao", "investment",
     "plant", "facility", "expansion",
+    # sinais em inglês (comunicados de multinacionais)
+    "invests", "investing", "expands", "opens", "inaugurates", "launches", "moves", "relocates",
+    "acquires", "acquisition", "new site", "center", "centre", "headquarters", "hub",
+    "manufacturing", "production", "capacity", "innovation", "technology", "research",
 ]
 
 # Além do sinal acima, a notícia precisa envolver uma EMPRESA ou um EMPREENDIMENTO
@@ -171,7 +270,8 @@ TERMOS_EMPRESARIAIS = [
     "replan", "terminal", "hub", "armazem", "armazenagem", "galpao", "centro de distribuicao",
     "centro logistico", "condominio industrial", "condominio logistico", "parque industrial",
     "loteamento empresarial", "data center", "datacenter", "centro de dados", "centro de pesquisa",
-    "centro tecnologico", "laboratorio", "p&d", "subestacao", "duto", "etanolduto", "alcoolduto",
+    "centro tecnologico", "centro de excelencia", "centro de inovacao", "centro global",
+    "laboratorio", "p&d", "subestacao", "duto", "etanolduto", "alcoolduto",
     "alcooduto", "ferrovia", "supermercado", "atacadista", "atacarejo", "shopping", "hotel",
     "rede varejista", "varejista", "loja", "hospital privado", "bndes", "investidores", "zpe",
     "biometano", "biogas", "saf", "biodiesel", "hidrogenio", "petroquimica", "fertilizantes",
@@ -276,7 +376,8 @@ EMPRESAS_CONHECIDAS = [
     "ICL", "Galvani", "SNF", "Covabra", "Renner", "Sabesp", "CPFL", "Comgás", "Rumo", "VLI",
     "Bravo Logística", "Transpetro", "Raizen", "Ecopetrol", "Mosaic", "Cargill", "Bunge",
     "Amazon", "Mercado Livre", "Magalu", "GLP", "Log CP", "Prologis", "Scala", "Ascenty",
-    "Equinix", "Odata", "Elea", "Unilever",
+    "Equinix", "Odata", "Elea", "Unilever", "Solenis", "Ingredion", "Clariant", "Dow",
+    "DuPont", "Corteva", "3M", "Henkel", "Ashland", "Kimberly-Clark", "Suzano", "Klabin",
 ]
 
 # ---------------------------------------------------------------------------

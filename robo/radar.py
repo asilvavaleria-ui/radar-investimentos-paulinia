@@ -45,6 +45,7 @@ ARQ_STATUS = RAIZ / "docs" / "data" / "status.json"
 ARQ_VISTOS = RAIZ / "data" / "vistos.json"
 
 FUSO_BR = timezone(timedelta(hours=-3))
+ESTATISTICAS = {"google_sem_link": 0}
 CABECALHOS = {
     "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"),
@@ -107,7 +108,7 @@ def montar_fontes():
     for c in config.CONSULTAS:
         fontes.append(("Google Notícias", url_google(c)))
         fontes.append(("Bing Notícias", url_bing(c)))
-    for site in config.SITES_PRIORITARIOS:
+    for site in config.SITES_PRIORITARIOS + config.SITES_EMPRESAS:
         fontes.append(("Google Notícias", url_google(f'"{config.CIDADE}" site:{site}')))
     for feed in config.FEEDS_EXTRAS:
         fontes.append(("RSS", feed))
@@ -132,7 +133,8 @@ def buscar_original_no_bing(titulo):
         return None, ""
     for e in feed.entries[:5]:
         titulo_bing = limpar_html(e.get("title", ""))
-        if normalizar(config.CIDADE) in normalizar(titulo_bing) and parecido(titulo_bing, titulo) >= 0.75:
+        semelhanca = parecido(titulo_bing, titulo)
+        if semelhanca >= 0.85 or (normalizar(config.CIDADE) in normalizar(titulo_bing) and semelhanca >= 0.75):
             return link_real(e.get("link", "")), limpar_html(e.get("summary", ""))
     return None, ""
 
@@ -149,8 +151,10 @@ def link_real(link):
             r = gnewsdecoder(link, interval=0.5)
             if r.get("status"):
                 return r["decoded_url"]
-        except Exception:
-            pass
+            print(f"  ! link do Google não decodificado: {r.get('message', '')[:120]}")
+        except Exception as erro:
+            print(f"  ! link do Google não decodificado: {erro}")
+        ESTATISTICAS["google_sem_link"] += 1
     return link
 
 
@@ -289,7 +293,7 @@ VERBOS_EMPRESA = (
     r"inaugurou|garante|passa a|constr[óo]i|construir[áa]|vai construir|instala|instalar[áa]|"
     r"vai instalar|implanta|implantar[áa]|amplia|ampliar[áa]|expande|compra|adquire|adquiriu|"
     r"escolhe|escolheu|confirma|ter[áa]|abre|come[çc]a|recebe aval|leva|traz|aposta|adapta|reformula|"
-    r"negocia|reserva|vence|vai sair|ser[áa] a maior"
+    r"negocia|reserva|vence|vai sair|ser[áa] a maior|transfere|transferiu|muda|leva"
 )
 RE_EMPRESA_TITULO = re.compile(rf"^([A-Z0-9][\w&.'’-]*(?:\s+(?:[A-Z0-9][\w&.'’-]*|de|do|da|&)){{0,5}})\s+(?:{VERBOS_EMPRESA})\b")
 RE_EMPRESA_TEXTO = re.compile(
@@ -449,7 +453,10 @@ def analisar(item):
     tudo = f"{item['titulo']} {descricao} {texto}"
     # Paulínia precisa aparecer no título, no subtítulo ou no início da matéria
     # (evita páginas que só citam a cidade em links laterais).
-    if normalizar(config.CIDADE) not in normalizar(f"{item['titulo']} {descricao} {texto[:3000]}"):
+    # Exceção: se a página não pôde ser lida, vale a busca do Google, que só traz
+    # resultados com "Paulínia" (entre aspas) no texto da notícia.
+    cidade_citada = normalizar(config.CIDADE) in normalizar(f"{item['titulo']} {descricao} {texto[:3000]}")
+    if not cidade_citada and (texto or item["origem"] != "Google Notícias"):
         return None
 
     pontos = pontuar(item["titulo"], descricao, texto)
@@ -600,6 +607,7 @@ def executar(args):
         "total_noticias": len(historico),
         "fontes_consultadas": status_fontes["ok"],
         "fontes_com_falha": status_fontes["erro"],
+        "links_google_nao_decodificados": ESTATISTICAS["google_sem_link"],
     })
     print(f"Concluído: {len(novas)} notícia(s) nova(s).")
 
