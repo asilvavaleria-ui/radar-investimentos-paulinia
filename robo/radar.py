@@ -453,10 +453,10 @@ def analisar(item):
     tudo = f"{item['titulo']} {descricao} {texto}"
     # Paulínia precisa aparecer no título, no subtítulo ou no início da matéria
     # (evita páginas que só citam a cidade em links laterais).
-    # Exceção: se a página não pôde ser lida, vale a busca do Google, que só traz
-    # resultados com "Paulínia" (entre aspas) no texto da notícia.
-    cidade_citada = normalizar(config.CIDADE) in normalizar(f"{item['titulo']} {descricao} {texto[:3000]}")
-    if not cidade_citada and (texto or item["origem"] != "Google Notícias"):
+    # Se o título/subtítulo não citam a cidade, ela precisa aparecer pelo menos
+    # duas vezes no texto da matéria (uma menção solta costuma ser link lateral).
+    cidade = normalizar(config.CIDADE)
+    if cidade not in normalizar(f"{item['titulo']} {descricao}") and normalizar(texto).count(cidade) < 2:
         return None
 
     pontos = pontuar(item["titulo"], descricao, texto)
