@@ -20,6 +20,23 @@
   ]
  },
  {
+  "id": "f3d1d411eddb94e5",
+  "titulo": "Fábrica da JetBio em Paulínia (SP) produzirá diesel renovável e SAF",
+  "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPd3JzeEtNY1JoZmljTXgwaFhlS2NUQUhtVU1xVmFhaFdKUVFjNzdoOGVMSmY1d0RFeFVVZlFoSFAzcTNSd05VcktPUzFkZkNjcXJoRm5hYmF6Q1g3My16MmZlazM4VGhyOUlhN1pGQUNKcmwxY0Y0dFQ0UmxJZ1Fvb0tsVHY4YmRhSEp2cGZGLWJFOTBDVjN5aWdCa1hNc3hEX1c0?oc=5",
+  "fonte": "JornalCana",
+  "publicado": "2026-10-09T11:14:00+00:00",
+  "coletado": "2026-10-22T12:05:46.063820+00:00",
+  "resumo": "Fábrica da JetBio em Paulínia (SP) produzirá diesel renovável e SAF",
+  "empresa": "JetBio",
+  "tipo": "Outros sinais",
+  "setor": "Energia e Petróleo",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 6,
+  "relevancia": "media"
+ },
+ {
   "id": "473a71c14ef8211d",
   "titulo": "JetBio adapta usina em SP para produzir diesel a partir de etanol",
   "link": "https://globorural.globo.com/biocombustiveis/noticia/2026/10/jetbio-adapta-usina-em-sp-para-produzir-diesel-a-partir-de-etanol.ghtml",
@@ -38,7 +55,8 @@
   "outras_fontes": [
    "boca.com.br",
    "JornalCana",
-   "Estadão"
+   "Estadão",
+   "Bloomberg Línea Brasil"
   ]
  },
  {
@@ -118,7 +136,9 @@
   "pontuacao": 9,
   "relevancia": "alta",
   "outras_fontes": [
-   "MT Econômico"
+   "MT Econômico",
+   "Portal do Agronegócio",
+   "Andravirtual"
   ]
  },
  {
@@ -153,7 +173,33 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 15,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "Exame",
+   "Folha de S.Paulo",
+   "Agência eixos"
+  ]
+ },
+ {
+  "id": "8c8b7cba1e5b4f0b",
+  "titulo": "Primeira usina de biometano do Brasil, Paulínia Verde, inicia operação comercial",
+  "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcmZGV051aW1lY0tINWIwajNCczAzbkdYRTE4WjA4czV4akZLWUJOeUdqOVphYWVuaVNXRFp5MHF0RS1sZkxwTEU0RDl0T3FJVmlMaDlRaGswbURGcFVUNHJta1F2OFlUVmUzX2pINnk5RFlSNjkyYWVOQjJwenR1R3JnNFlKRzFva1AyR2Z0bE5OMEY5U3NtRHJKVjVtN3NPOU42ZmJRTlpGY3pKdlN3UFA3LUg3b1Q0WnlB?oc=5",
+  "fonte": "JornalCana",
+  "publicado": "2026-08-06T07:00:00+00:00",
+  "coletado": "2026-10-22T12:05:54.512692+00:00",
+  "resumo": "Primeira usina de biometano do Brasil, Paulínia Verde, inicia operação comercial",
+  "empresa": "",
+  "tipo": "Início de operação",
+  "setor": "Energia e Petróleo",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 6,
+  "relevancia": "media",
+  "outras_fontes": [
+   "eixos",
+   "Petronotícias"
+  ]
  },
  {
   "id": "46b1543a2f803828",
@@ -170,7 +216,10 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 6,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "O GLOBO"
+  ]
  },
  {
   "id": "c8a4b87572cff9bc",
@@ -187,7 +236,10 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 12,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "Transporte Moderno"
+  ]
  },
  {
   "id": "d725d6a0dcc3606e",
@@ -230,7 +282,18 @@
   "relevancia": "alta",
   "outras_fontes": [
    "noticiasdepaulinia.com.br",
-   "Hora Campinas"
+   "Hora Campinas",
+   "Carta Campinas",
+   "Monitor Mercantil",
+   "Bahia Econômica",
+   "ultimasnoticias.inf.br",
+   "Brasil 247",
+   "Canal Rural",
+   "Hora do Povo",
+   "Vermelho",
+   "Correio Braziliense",
+   "Valor Econômico",
+   "CNN Brasil"
   ]
  },
  {
@@ -303,7 +366,10 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 9,
-  "relevancia": "media"
+  "relevancia": "media",
+  "outras_fontes": [
+   "noticiasdepaulinia.com.br"
+  ]
  },
  {
   "id": "791847101214327d",
@@ -415,7 +481,10 @@
   "outras_fontes": [
    "SB Notícias",
    "Brasil 61",
-   "noticiasdepaulinia.com.br"
+   "noticiasdepaulinia.com.br",
+   "CicloVivo",
+   "Portal ABC do ABC",
+   "VEJA"
   ]
  },
  {
