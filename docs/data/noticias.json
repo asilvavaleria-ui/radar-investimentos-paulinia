@@ -1,5 +1,58 @@
 [
  {
+  "id": "c400dd27339dea98",
+  "titulo": "AutoZone anuncia Centro de Distribuição em Paulínia e abre vagas",
+  "link": "https://www.tribunaliberal.com.br/geral/AutoZone-anuncia-Centro-de-Distribui%C3%A7%C3%A3o-em-Paul%C3%ADnia-e-abre-vagas",
+  "fonte": "tribunaliberal.com.br",
+  "publicado": "2026-10-22T17:00:00+00:00",
+  "coletado": "2026-10-24T10:28:24.613680+00:00",
+  "resumo": "A AutoZone, multinacional americana do setor de autopeças,\r\nestá expandindo sua presença no Brasil com a futura inauguração de um Centro de\r\nDistribuição em Paulínia. Com mais de 35 mil metros quadrados de área construída em um\r\nterreno total de 100 mil metros quadrados, o novo centro logístico irá ampliar\r\na capacidade de armazenagem da AutoZone. Interessados devem enviar o currículo para o e-mail rhcd.paulinia@autozone.com.",
+  "empresa": "AutoZone",
+  "tipo": "Início de operação",
+  "setor": "Logística",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 21,
+  "relevancia": "alta"
+ },
+ {
+  "id": "865eb95f5ab43f62",
+  "titulo": "CPFL anuncia R$ 32 milhões em nova subestação de energia para Paulínia",
+  "link": "https://www.tribunaliberal.com.br/geral/CPFL-anuncia-32-milhoes-em-nova-subestacao-de-energia-para-Paulinia",
+  "fonte": "tribunaliberal.com.br",
+  "publicado": "2026-10-20T17:00:00+00:00",
+  "coletado": "2026-10-24T10:28:24.807690+00:00",
+  "resumo": "Concessionária informou que vai construir sua sexta\r\nsubestação na cidade até 2029; empreendimento, batizado de Paulínia 6, beneficiará\r\nmais de 20 mil clientes da região sudoeste do município, que abrange bairros\r\nmais populosos Com foco voltado ao crescimento da região de Paulínia, a\r\nCPFL Paulista oficializou o projeto para construção de uma nova subestação de\r\nenergia no município.",
+  "empresa": "CPFL",
+  "tipo": "Nova instalação",
+  "setor": "Energia e Petróleo",
+  "valores": [
+   "R$ 32 milhões"
+  ],
+  "valor_reais": 32000000.0,
+  "empregos": 0,
+  "pontuacao": 19,
+  "relevancia": "alta"
+ },
+ {
+  "id": "d6cab986086b6025",
+  "titulo": "Orizon: Aneel autoriza transferência de contrato com Mercurio Partners para usina de Paulínia",
+  "link": "https://br.advfn.com/noticias/PAPERBR/2022/artigo/87992361",
+  "fonte": "br.advfn.com",
+  "publicado": "2026-10-18T16:59:00+00:00",
+  "coletado": "2026-10-24T10:28:25.279597+00:00",
+  "resumo": "A Orizon comunicou que a Aneel autorizou, na semana passada, a transferência de titularidade do contrato com a Mercurio Partners para a usina termelétrica Paulínia Verde, que é uma joint venture entre ...",
+  "empresa": "Orizon",
+  "tipo": "Outros sinais",
+  "setor": "Energia e Petróleo",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 3,
+  "relevancia": "media"
+ },
+ {
   "id": "a319a7ce666b5990",
   "titulo": "Solenis transfere Centro de Excelência em Celulose para o Brasil para acelerar a inovação na indústria global de celulose",
   "link": "https://portalcelulose.com.br/solenis-transfere-centro-de-excelencia-em-celulose-para-o-brasil-para-acelerar-a-inovacao-na-industria-global-de-celulose/",
@@ -18,6 +71,25 @@
   "outras_fontes": [
    "EmbalagemMarca"
   ]
+ },
+ {
+  "id": "216c7d3c0befeddd",
+  "titulo": "Governador inaugura em Paulínia a maior planta de biometano do Brasil",
+  "link": "https://www.tribunaliberal.com.br/politica/Governador-inaugura-em-Paulinia-a-maior-planta-de-biometano-do-Brasil",
+  "fonte": "tribunaliberal.com.br",
+  "publicado": "2026-10-14T17:00:00+00:00",
+  "coletado": "2026-10-24T10:28:25.546859+00:00",
+  "resumo": "A planta da OneBio, instalada em um Ecoparque que integra um\r\ncomplexo ambiental avançado — em substituição ao antigo aterro sanitário —,\r\nproduz biometano por meio da purificação de biogás gerado a partir de resíduos\r\nsólidos urbanos depositados em aterro. A nova planta em Paulínia posiciona São Paulo na vanguarda\r\nda economia circular e da descarbonização da matriz energética brasileira,\r\ntransformando resíduos urbanos em energia renovável e ampliando a segurança\r\nenergética do país.",
+  "empresa": "",
+  "tipo": "Início de operação",
+  "setor": "Energia e Petróleo",
+  "valores": [
+   "R$ 54,8 milhões"
+  ],
+  "valor_reais": 54800000.0,
+  "empregos": 0,
+  "pontuacao": 34,
+  "relevancia": "alta"
  },
  {
   "id": "a98bc33dad05f0ad",
