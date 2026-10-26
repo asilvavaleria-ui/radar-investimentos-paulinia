@@ -17,23 +17,6 @@
   "relevancia": "media"
  },
  {
-  "id": "d5828eb579e42614",
-  "titulo": "Braskem leva propostas ambientais e economia circular a alunos de Paulínia",
-  "link": "https://www.tribunaliberal.com.br/educacao/Braskem-leva-propostas-ambientais-e-economia-circular-a-alunos-de-Paulinia",
-  "fonte": "tribunaliberal.com.br",
-  "publicado": "2026-10-23T17:00:00+00:00",
-  "coletado": "2026-10-26T10:40:52.529320+00:00",
-  "resumo": "No Brasil, a semana é marcada por ações que conectam colaboradores,\r\nescolas e comunidades, fortalecendo o compromisso da companhia com o\r\ndesenvolvimento sustentável. Atividades\r\ncomo estas mostram como empresas e comunidades podem trabalhar juntas para\r\nconstruir um futuro mais sustentável e consciente”, destaca Alexandra Calixto\r\nGioso, Gerente de Relações Institucionais da Braskem Sudeste.",
-  "empresa": "Braskem",
-  "tipo": "Outros sinais",
-  "setor": "Indústria",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 8,
-  "relevancia": "media"
- },
- {
   "id": "c400dd27339dea98",
   "titulo": "AutoZone anuncia Centro de Distribuição em Paulínia e abre vagas",
   "link": "https://www.tribunaliberal.com.br/geral/AutoZone-anuncia-Centro-de-Distribui%C3%A7%C3%A3o-em-Paul%C3%ADnia-e-abre-vagas",
@@ -145,26 +128,6 @@
   "relevancia": "alta"
  },
  {
-  "id": "a98bc33dad05f0ad",
-  "titulo": "ONS destina 228 MW da Rede Básica a três projetos de data centers em São Paulo",
-  "link": "https://www.datacenterdynamics.com/br/not%C3%ADcias/ons-destina-228-mw-da-rede-b%C3%A1sica-a-tr%C3%AAs-projetos-de-data-centers-em-s%C3%A3o-paulo/",
-  "fonte": "Data Center Dynamics",
-  "publicado": "2026-10-12T12:56:48+00:00",
-  "coletado": "2026-10-21T18:56:17.902943+00:00",
-  "resumo": "A Pahlavan One e Pahlavan Three integram o campus GRU da CloudHQ, em Paulínia (SP). A Digital DC Brasil é uma empresa local de data centers que opera sob a NextStream, plataforma latino-americana criada pela gestora de investimentos Actis. Segundo ele, a PNAST oferece mais previsibilidade aos agentes, torna os investimentos mais eficientes e garante que a expansão da transmissão acompanhe as necessidades de desenvolvimento do país.",
-  "empresa": "",
-  "tipo": "Expansão",
-  "setor": "Tecnologia",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 12,
-  "relevancia": "media",
-  "outras_fontes": [
-   "MegaWhat"
-  ]
- },
- {
   "id": "f3d1d411eddb94e5",
   "titulo": "Fábrica da JetBio em Paulínia (SP) produzirá diesel renovável e SAF",
   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPd3JzeEtNY1JoZmljTXgwaFhlS2NUQUhtVU1xVmFhaFdKUVFjNzdoOGVMSmY1d0RFeFVVZlFoSFAzcTNSd05VcktPUzFkZkNjcXJoRm5hYmF6Q1g3My16MmZlazM4VGhyOUlhN1pGQUNKcmwxY0Y0dFQ0UmxJZ1Fvb0tsVHY4YmRhSEp2cGZGLWJFOTBDVjN5aWdCa1hNc3hEX1c0?oc=5",
@@ -182,29 +145,6 @@
   "relevancia": "media",
   "outras_fontes": [
    "The AgriBiz"
-  ]
- },
- {
-  "id": "473a71c14ef8211d",
-  "titulo": "JetBio adapta usina em SP para produzir diesel a partir de etanol",
-  "link": "https://globorural.globo.com/biocombustiveis/noticia/2026/10/jetbio-adapta-usina-em-sp-para-produzir-diesel-a-partir-de-etanol.ghtml",
-  "fonte": "globorural.globo.com",
-  "publicado": "2026-10-09T06:29:00+00:00",
-  "coletado": "2026-10-21T18:56:22.596518+00:00",
-  "resumo": "A JetBio reformulou o projeto de uma usina em Paulínia (SP) para incluir a produção de diesel renovável, a partir de etanol , além de combustível sustentável de aviação (SAF, na sigla em inglês). A unidade terá capacidade para processar 1,8 bilhão de litros de etanol por ano e poderá direcionar a matéria-prima para a fabricação de diesel renovável ou SAF, conforme a demanda.",
-  "empresa": "JetBio",
-  "tipo": "Investimento anunciado",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 21,
-  "relevancia": "alta",
-  "outras_fontes": [
-   "boca.com.br",
-   "JornalCana",
-   "Estadão",
-   "Bloomberg Línea Brasil"
   ]
  },
  {
@@ -343,28 +283,11 @@
   "relevancia": "media"
  },
  {
-  "id": "d7f1d745b85c4d0e",
-  "titulo": "Data centers da Pahlavan perdem disputa para reservar espaço na rede",
-  "link": "https://megawhat.uol.com.br/destaques-do-diario/data-centers-da-pahlavan-perdem-disputa-para-reservar-espaco-na-rede/",
-  "fonte": "MegaWhat",
-  "publicado": "2026-08-31T07:00:00+00:00",
-  "coletado": "2026-10-22T12:31:56.300432+00:00",
-  "resumo": "A Agência Nacional de Energia Elétrica (Aneel) negou pedido de medida cautelar das empresas Pahlavan Ventures One, Pahlavan Ventures Two e Pahlavan Ventures Three para manter três projetos de data centers na fila de acesso à rede básica até que surgisse capacidade para ampliar o consumo dos empreendimentos. Os três empreendimentos integram o Complexo Pahlavan, em Paulínia, São Paulo, com conexão compartilhada no barramento de 440 kV da subestação Replan.",
-  "empresa": "",
-  "tipo": "Outros sinais",
-  "setor": "Energia e Petróleo",
-  "valores": [],
-  "valor_reais": 0.0,
-  "empregos": 0,
-  "pontuacao": 9,
-  "relevancia": "media"
- },
- {
   "id": "ee57a79f57c9c21b",
   "titulo": "Ultragaz inaugura estação de biometano para abastecer frota pesada em Paulínia (SP)",
   "link": "https://veja.abril.com.br/economia/ultragaz-abre-estacao-propria-de-biometano-para-abastecer-ate-200-caminhoes-por-dia/",
   "fonte": "Tecnologística",
-  "publicado": "2026-08-20T07:00:00+00:00",
+  "publicado": "2026-08-17T16:00:38-03:00",
   "coletado": "2026-10-21T18:56:38.400431+00:00",
   "resumo": "A Ultragaz inaugurou, em Paulínia (SP), sua primeira estação própria de abastecimento de biometano, ampliando a aposta no combustível renovável também para a logística de sua frota. A companhia já comercializou 28 milhões de m³ de biometano, volume que, segundo a empresa, permitiu evitar a emissão de 56 mil toneladas de CO₂. Com a nova estrutura, a Ultragaz passa a investir não apenas na distribuição do combustível, mas também na infraestrutura necessária para ampliar seu uso no transporte rodoviário.",
   "empresa": "Ultragaz",
