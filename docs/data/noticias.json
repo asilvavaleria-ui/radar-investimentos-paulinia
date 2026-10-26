@@ -1,5 +1,22 @@
 [
  {
+  "id": "d5828eb579e42614",
+  "titulo": "Braskem leva propostas ambientais e economia circular a alunos de Paulínia",
+  "link": "https://www.tribunaliberal.com.br/educacao/Braskem-leva-propostas-ambientais-e-economia-circular-a-alunos-de-Paulinia",
+  "fonte": "tribunaliberal.com.br",
+  "publicado": "2026-10-23T17:00:00+00:00",
+  "coletado": "2026-10-26T10:40:52.529320+00:00",
+  "resumo": "No Brasil, a semana é marcada por ações que conectam colaboradores,\r\nescolas e comunidades, fortalecendo o compromisso da companhia com o\r\ndesenvolvimento sustentável. Atividades\r\ncomo estas mostram como empresas e comunidades podem trabalhar juntas para\r\nconstruir um futuro mais sustentável e consciente”, destaca Alexandra Calixto\r\nGioso, Gerente de Relações Institucionais da Braskem Sudeste.",
+  "empresa": "Braskem",
+  "tipo": "Outros sinais",
+  "setor": "Indústria",
+  "valores": [],
+  "valor_reais": 0.0,
+  "empregos": 0,
+  "pontuacao": 8,
+  "relevancia": "media"
+ },
+ {
   "id": "c400dd27339dea98",
   "titulo": "AutoZone anuncia Centro de Distribuição em Paulínia e abre vagas",
   "link": "https://www.tribunaliberal.com.br/geral/AutoZone-anuncia-Centro-de-Distribui%C3%A7%C3%A3o-em-Paul%C3%ADnia-e-abre-vagas",
@@ -89,6 +106,25 @@
   "valor_reais": 54800000.0,
   "empregos": 0,
   "pontuacao": 34,
+  "relevancia": "alta"
+ },
+ {
+  "id": "8eb1be299cb0c2e8",
+  "titulo": "Com investimento de R$ 35 milhões, Boa Supermercados chega a Paulínia",
+  "link": "https://www.tribunaliberal.com.br/index.php/negocios/Com-investimento-de-35-milhoes-Boa-Supermercados-chega-a-Paulinia",
+  "fonte": "tribunaliberal.com.br",
+  "publicado": "2026-10-13T17:00:00+00:00",
+  "coletado": "2026-10-26T10:40:54.026320+00:00",
+  "resumo": "O Boa Supermercados dá sequência\r\nao seu plano de expansão com a inauguração da primeira unidade da marca em\r\nPaulínia. Com\r\ninvestimento total de R$ 35 milhões e mais de 130 empregos diretos gerados,\r\nessa é a 20ª loja do grupo. Luciano Boa, presidente do Grupo\r\nBoa, destaca a escolha estratégica de Paulínia dentro do plano de expansão da\r\nrede.",
+  "empresa": "",
+  "tipo": "Início de operação",
+  "setor": "Comércio e Serviços",
+  "valores": [
+   "R$ 35 milhões"
+  ],
+  "valor_reais": 35000000.0,
+  "empregos": 130,
+  "pontuacao": 31,
   "relevancia": "alta"
  },
  {
