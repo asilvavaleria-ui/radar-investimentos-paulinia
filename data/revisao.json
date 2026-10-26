@@ -1,0 +1,79 @@
+[
+ {
+  "titulo": "Petrobras aprimora produção e oferece ao mercado SAF com menor intensidade de ca",
+  "pagina_lida": true,
+  "data_rss": "2026-10-26",
+  "data_pagina": "2026-10-26",
+  "erro": null
+ },
+ {
+  "titulo": "AutoZone anuncia Centro de Distribuição em Paulínia e abre vagas",
+  "pagina_lida": true,
+  "data_rss": "2026-10-22",
+  "data_pagina": "2026-10-26",
+  "erro": null
+ },
+ {
+  "titulo": "CPFL anuncia R$ 32 milhões em nova subestação de energia para Paulínia",
+  "pagina_lida": true,
+  "data_rss": "2026-10-20",
+  "data_pagina": "2026-10-26",
+  "erro": null
+ },
+ {
+  "titulo": "Orizon: Aneel autoriza transferência de contrato com Mercurio Partners para usin",
+  "pagina_lida": false,
+  "data_rss": "2026-10-18",
+  "data_pagina": null,
+  "erro": "403 Client Error: Forbidden for url: https://br.advfn.com/noticias/PAPERBR/2022/artigo/87992361"
+ },
+ {
+  "titulo": "Solenis transfere Centro de Excelência em Celulose para o Brasil para acelerar a",
+  "pagina_lida": true,
+  "data_rss": "2026-10-15",
+  "data_pagina": "2026-10-15",
+  "erro": null
+ },
+ {
+  "titulo": "Governador inaugura em Paulínia a maior planta de biometano do Brasil",
+  "pagina_lida": true,
+  "data_rss": "2026-10-14",
+  "data_pagina": "2026-10-26",
+  "erro": null
+ },
+ {
+  "titulo": "Com investimento de R$ 35 milhões, Boa Supermercados chega a Paulínia",
+  "pagina_lida": true,
+  "data_rss": "2026-10-13",
+  "data_pagina": "2026-10-26",
+  "erro": null
+ },
+ {
+  "titulo": "Multinacional tira dos Estados Unidos seu centro global de pesquisa em celulose ",
+  "pagina_lida": true,
+  "data_rss": "2026-10-08",
+  "data_pagina": "2026-10-08",
+  "erro": null
+ },
+ {
+  "titulo": "Solenis moves global pulp innovation center to Brazil",
+  "pagina_lida": true,
+  "data_rss": "2026-10-06",
+  "data_pagina": null,
+  "erro": null
+ },
+ {
+  "titulo": "Ultragaz inaugura estação de biometano para abastecer frota pesada em Paulínia (",
+  "pagina_lida": true,
+  "data_rss": "2026-08-17",
+  "data_pagina": "2026-08-17",
+  "erro": null
+ },
+ {
+  "titulo": "Yara negocia venda de fábrica de ácido sulfúrico em Paulínia",
+  "pagina_lida": true,
+  "data_rss": "2026-08-03",
+  "data_pagina": "2026-08-03",
+  "erro": null
+ }
+]
