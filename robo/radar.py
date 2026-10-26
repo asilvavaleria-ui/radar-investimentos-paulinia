@@ -219,34 +219,49 @@ def _converter_data(valor):
         return None
 
 
-def data_da_pagina(sopa, url, html):
-    """Data de publicação informada pela própria página (mais confiável que a do Bing/Google)."""
+def datas_da_pagina(sopa, url, html, texto_corpo):
+    """Datas candidatas à data de publicação, da mais confiável para a menos confiável."""
+    candidatas = []
     atributos = [("property", "article:published_time"), ("property", "og:published_time"),
                  ("itemprop", "datePublished"), ("name", "date"), ("name", "pubdate"),
                  ("name", "publishdate"), ("name", "DC.date.issued"), ("name", "article:published_time")]
     for attr, nome in atributos:
         tag = sopa.find("meta", attrs={attr: nome})
-        if tag and _converter_data(tag.get("content", "")[:25]):
-            return _converter_data(tag.get("content", "")[:25])
-    m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', html)
-    if m and _converter_data(m.group(1)[:25]):
-        return _converter_data(m.group(1)[:25])
+        if tag:
+            candidatas.append(_converter_data(tag.get("content", "")[:25]))
+    candidatas += [_converter_data(v[:25]) for v in re.findall(r'"datePublished"\s*:\s*"([^"]+)"', html)]
     tempo = sopa.find("time", attrs={"datetime": True})
-    if tempo and _converter_data(tempo["datetime"][:25]):
-        return _converter_data(tempo["datetime"][:25])
+    if tempo:
+        candidatas.append(_converter_data(tempo["datetime"][:25]))
     m = re.search(r"/(20\d{2})/(\d{2})/(\d{2})/", url)
     if m:
-        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=FUSO_BR)
-    texto = normalizar(sopa.get_text(" ")[:6000])
-    m = re.search(r"\b(\d{1,2}) de (" + "|".join(MESES) + r") de (20\d{2})", texto)
-    if m:
-        return datetime(int(m.group(3)), MESES[m.group(2)], int(m.group(1)), tzinfo=FUSO_BR)
-    m = re.search(r"\b(\d{2})/(\d{2})/(20\d{2})\b", texto)
-    if m and 1 <= int(m.group(2)) <= 12 and 1 <= int(m.group(1)) <= 31:
-        return datetime(int(m.group(3)), int(m.group(2)), int(m.group(1)), tzinfo=FUSO_BR)
-    m = re.search(r"/(20\d{2})/", url)  # ano no endereço (ex.: /2022/)
+        candidatas.append(datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=FUSO_BR))
+    # datas escritas no início do corpo da matéria (sem cabeçalho/rodapé do site)
+    inicio = normalizar(texto_corpo)
+    for d, mes, ano in re.findall(r"\b(\d{1,2}) de (" + "|".join(MESES) + r") de (20\d{2})", inicio):
+        candidatas.append(datetime(int(ano), MESES[mes], int(d), tzinfo=FUSO_BR))
+    for d, mes, ano in re.findall(r"\b(\d{2})/(\d{2})/(20\d{2})\b", inicio):
+        if 1 <= int(mes) <= 12 and 1 <= int(d) <= 31:
+            candidatas.append(datetime(int(ano), int(mes), int(d), tzinfo=FUSO_BR))
+    candidatas.append(ano_no_endereco(url))
+    return [c for c in candidatas if c]
+
+
+def ano_no_endereco(url):
+    """Ano no endereço da notícia (ex.: /2022/), quando é anterior ao ano atual."""
+    m = re.search(r"/(20\d{2})/", url)
     if m and int(m.group(1)) < agora().year:
         return datetime(int(m.group(1)), 12, 31, tzinfo=FUSO_BR)
+    return None
+
+
+def escolher_data(candidatas, data_rss):
+    """Primeira data candidata que não seja posterior à data informada pelo Bing/Google.
+    (Muitos sites exibem a data de HOJE no topo; uma notícia não pode ser publicada
+    depois de indexada.)"""
+    for c in candidatas:
+        if c <= data_rss + timedelta(days=1):
+            return c
     return None
 
 
@@ -262,7 +277,7 @@ def ler_artigo(url):
     if "news.google.com" in r.url or "consent.google" in r.url:
         return "", "", url, None  # página do próprio Google, não da notícia
     sopa = BeautifulSoup(r.text, "html.parser")
-    data = data_da_pagina(sopa, r.url, r.text)
+    metas_html = str(sopa.head or "") + "".join(str(t) for t in sopa.find_all("script", type="application/ld+json"))
     meta = sopa.find("meta", attrs={"property": "og:description"}) or \
         sopa.find("meta", attrs={"name": "description"})
     descricao = meta.get("content", "").strip() if meta else ""
@@ -271,7 +286,9 @@ def ler_artigo(url):
     corpo = sopa.find("article") or sopa.body or sopa
     paragrafos = [p.get_text(" ", strip=True) for p in corpo.find_all("p")]
     texto = " ".join(p for p in paragrafos if len(p) > 60)
-    return texto[:20000], descricao, r.url, data
+    datas = datas_da_pagina(BeautifulSoup(metas_html, "html.parser"), r.url, metas_html,
+                            corpo.get_text(" ", strip=True)[:6000])
+    return texto[:20000], descricao, r.url, datas
 
 
 # ---------------------------------------------------------------------------
@@ -467,7 +484,10 @@ def cidade_relevante(titulo, descricao, texto):
     if cidade in normalizar(f"{titulo} {descricao}"):
         return True
     texto_n = normalizar(texto)
-    return cidade in texto_n[:1500] and texto_n.count(cidade) >= 2
+    mencoes = texto_n.count(cidade)
+    if cidade not in texto_n[:1500] or mencoes < 2:
+        return False
+    return all(texto_n.count(lugar) <= mencoes for lugar in config.OUTRAS_LOCALIDADES)
 
 
 def passa_triagem(titulo, descricao):
@@ -498,7 +518,9 @@ def analisar(item):
         original, desc_bing = buscar_original_no_bing(item["titulo"])
         if original:
             url, descricao = original, descricao or desc_bing
-    texto, meta_desc, url_final, data_pagina = ler_artigo(url) if "news.google.com" not in url else ("", "", url, None)
+    texto, meta_desc, url_final, datas = ler_artigo(url) if "news.google.com" not in url else ("", "", url, [])
+    datas = datas or [d for d in [ano_no_endereco(url_final)] if d]
+    data_pagina = escolher_data(datas, item["publicado"])
     # A data do Bing/Google às vezes é a da indexação; prevalece a data da página.
     if data_pagina and data_pagina < item["publicado"] - timedelta(days=1):
         item["publicado"] = data_pagina
@@ -632,7 +654,9 @@ def revisar_historico(historico):
             print(f"  - filtro: {n['titulo'][:90]}")
             continue
         if "news.google.com" not in n["link"]:
-            texto, _, _, data = ler_artigo(n["link"])
+            texto, _, _, datas = ler_artigo(n["link"])
+            datas = datas or [d for d in [ano_no_endereco(n["link"])] if d]
+            data = escolher_data(datas, datetime.fromisoformat(n["publicado"]))
             relatorio.append({"titulo": n["titulo"][:80], "pagina_lida": bool(texto),
                               "data_rss": n["publicado"][:10], "data_pagina": f"{data:%Y-%m-%d}" if data else None,
                               "erro": ULTIMO_ERRO.get("ler_artigo")})

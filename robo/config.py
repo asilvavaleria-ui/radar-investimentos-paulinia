@@ -385,6 +385,17 @@ EMPRESAS_CONHECIDAS = [
     "AutoZone", "Boa Supermercados", "CPFL Energia",
 ]
 
+# Outras cidades e refinarias: se o título não cita Paulínia e alguma destas
+# aparece no texto mais vezes que Paulínia, a notícia é sobre outro lugar.
+OUTRAS_LOCALIDADES = [
+    "duque de caxias", "reduc", "cubatao", "rpbc", "mataripe", "repar", "araucaria", "regap",
+    "betim", "revap", "sao jose dos campos", "rnest", "ipojuca", "refap", "canoas", "itaborai",
+    "americana", "sumare", "campinas", "hortolandia", "cosmopolis", "jaguariuna", "valinhos",
+    "indaiatuba", "nova odessa", "santa barbara", "piracicaba", "limeira", "jundiai", "sorocaba",
+    "guarulhos", "osasco", "barueri", "cajamar", "santos", "rio de janeiro", "minas gerais",
+    "parana", "bahia", "pernambuco", "mato grosso", "goias", "santa catarina", "rio grande do sul",
+]
+
 # ---------------------------------------------------------------------------
 # SETORES — usados para classificar e filtrar no painel.
 # ---------------------------------------------------------------------------
