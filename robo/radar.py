@@ -206,16 +206,60 @@ def coletar_itens():
     return list(itens.values()), status_fontes
 
 
+MESES = {"janeiro": 1, "fevereiro": 2, "marco": 3, "abril": 4, "maio": 5, "junho": 6, "julho": 7,
+         "agosto": 8, "setembro": 9, "outubro": 10, "novembro": 11, "dezembro": 12}
+
+
+def _converter_data(valor):
+    try:
+        d = datetime.fromisoformat(str(valor).strip().replace("Z", "+00:00"))
+        return d if d.tzinfo else d.replace(tzinfo=FUSO_BR)
+    except ValueError:
+        return None
+
+
+def data_da_pagina(sopa, url, html):
+    """Data de publicação informada pela própria página (mais confiável que a do Bing/Google)."""
+    atributos = [("property", "article:published_time"), ("property", "og:published_time"),
+                 ("itemprop", "datePublished"), ("name", "date"), ("name", "pubdate"),
+                 ("name", "publishdate"), ("name", "DC.date.issued"), ("name", "article:published_time")]
+    for attr, nome in atributos:
+        tag = sopa.find("meta", attrs={attr: nome})
+        if tag and _converter_data(tag.get("content", "")[:25]):
+            return _converter_data(tag.get("content", "")[:25])
+    m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', html)
+    if m and _converter_data(m.group(1)[:25]):
+        return _converter_data(m.group(1)[:25])
+    tempo = sopa.find("time", attrs={"datetime": True})
+    if tempo and _converter_data(tempo["datetime"][:25]):
+        return _converter_data(tempo["datetime"][:25])
+    m = re.search(r"/(20\d{2})/(\d{2})/(\d{2})/", url)
+    if m:
+        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=FUSO_BR)
+    texto = normalizar(sopa.get_text(" ")[:6000])
+    m = re.search(r"\b(\d{1,2}) de (" + "|".join(MESES) + r") de (20\d{2})", texto)
+    if m:
+        return datetime(int(m.group(3)), MESES[m.group(2)], int(m.group(1)), tzinfo=FUSO_BR)
+    m = re.search(r"\b(\d{2})/(\d{2})/(20\d{2})\b", texto)
+    if m and 1 <= int(m.group(2)) <= 12 and 1 <= int(m.group(1)) <= 31:
+        return datetime(int(m.group(3)), int(m.group(2)), int(m.group(1)), tzinfo=FUSO_BR)
+    m = re.search(r"/(20\d{2})/", url)  # ano no endereço (ex.: /2022/)
+    if m and int(m.group(1)) < agora().year:
+        return datetime(int(m.group(1)), 12, 31, tzinfo=FUSO_BR)
+    return None
+
+
 def ler_artigo(url):
-    """Baixa a página da notícia e devolve (texto, descrição meta, url final)."""
+    """Baixa a página da notícia e devolve (texto, descrição meta, url final, data de publicação)."""
     try:
         r = requests.get(url, headers=CABECALHOS, timeout=15)
         r.raise_for_status()
     except Exception:
-        return "", "", url
+        return "", "", url, None
     if "news.google.com" in r.url or "consent.google" in r.url:
-        return "", "", url  # página do próprio Google, não da notícia
+        return "", "", url, None  # página do próprio Google, não da notícia
     sopa = BeautifulSoup(r.text, "html.parser")
+    data = data_da_pagina(sopa, r.url, r.text)
     meta = sopa.find("meta", attrs={"property": "og:description"}) or \
         sopa.find("meta", attrs={"name": "description"})
     descricao = meta.get("content", "").strip() if meta else ""
@@ -224,7 +268,7 @@ def ler_artigo(url):
     corpo = sopa.find("article") or sopa.body or sopa
     paragrafos = [p.get_text(" ", strip=True) for p in corpo.find_all("p")]
     texto = " ".join(p for p in paragrafos if len(p) > 60)
-    return texto[:20000], descricao, r.url
+    return texto[:20000], descricao, r.url, data
 
 
 # ---------------------------------------------------------------------------
@@ -414,6 +458,15 @@ def resumo_ia(titulo, texto):
         return None
 
 
+def cidade_relevante(titulo, descricao, texto):
+    """Paulínia no título/subtítulo, ou citada logo no início da matéria e mais de uma vez."""
+    cidade = normalizar(config.CIDADE)
+    if cidade in normalizar(f"{titulo} {descricao}"):
+        return True
+    texto_n = normalizar(texto)
+    return cidade in texto_n[:1500] and texto_n.count(cidade) >= 2
+
+
 def passa_triagem(titulo, descricao):
     """Título/subtítulo precisam indicar um empreendimento de EMPRESA em Paulínia."""
     titulo_n = normalizar(titulo)
@@ -442,7 +495,12 @@ def analisar(item):
         original, desc_bing = buscar_original_no_bing(item["titulo"])
         if original:
             url, descricao = original, descricao or desc_bing
-    texto, meta_desc, url_final = ler_artigo(url) if "news.google.com" not in url else ("", "", url)
+    texto, meta_desc, url_final, data_pagina = ler_artigo(url) if "news.google.com" not in url else ("", "", url, None)
+    # A data do Bing/Google às vezes é a da indexação; prevalece a data da página.
+    if data_pagina and data_pagina < item["publicado"] - timedelta(days=1):
+        item["publicado"] = data_pagina
+    if item["publicado"] < agora() - timedelta(days=config.DIAS_RETROATIVOS):
+        return None
     if not descricao or normalizar(descricao).startswith(titulo_n[:40]):
         descricao = meta_desc
 
@@ -455,8 +513,7 @@ def analisar(item):
     # (evita páginas que só citam a cidade em links laterais).
     # Se o título/subtítulo não citam a cidade, ela precisa aparecer pelo menos
     # duas vezes no texto da matéria (uma menção solta costuma ser link lateral).
-    cidade = normalizar(config.CIDADE)
-    if cidade not in normalizar(f"{item['titulo']} {descricao}") and normalizar(texto).count(cidade) < 2:
+    if not cidade_relevante(item["titulo"], descricao, texto):
         return None
 
     pontos = pontuar(item["titulo"], descricao, texto)
@@ -563,12 +620,40 @@ def registrar_repetida(item, conhecidas):
 # ---------------------------------------------------------------------------
 # Execução
 # ---------------------------------------------------------------------------
+def revisar_historico(historico):
+    """Reaplica filtros e confere a data real de publicação das notícias já gravadas."""
+    corte = agora() - timedelta(days=365)
+    mantidas = []
+    for n in historico:
+        if not passa_triagem(n["titulo"], ""):
+            print(f"  - filtro: {n['titulo'][:90]}")
+            continue
+        if "news.google.com" not in n["link"]:
+            texto, _, _, data = ler_artigo(n["link"])
+            if data and data < datetime.fromisoformat(n["publicado"]) - timedelta(days=1):
+                print(f"  ~ data corrigida {n['publicado'][:10]} -> {data:%Y-%m-%d}: {n['titulo'][:70]}")
+                n["publicado"] = data.isoformat()
+            if texto and not cidade_relevante(n["titulo"], "", texto):
+                print(f"  - não é sobre {config.CIDADE}: {n['titulo'][:90]}")
+                continue
+        if datetime.fromisoformat(n["publicado"]) < corte:
+            print(f"  - antiga: {n['titulo'][:90]}")
+            continue
+        mantidas.append(n)
+    mantidas.sort(key=lambda n: n["publicado"], reverse=True)
+    gravar_json(ARQ_NOTICIAS, mantidas)
+    print(f"Histórico revisado: {len(historico)} -> {len(mantidas)} notícias.")
+
+
 def executar(args):
     inicio = agora()
     historico = ler_json(ARQ_NOTICIAS, [])
     vistos = set(ler_json(ARQ_VISTOS, []))
     vistos.update(n["id"] for n in historico)
 
+    if args.revisar_historico:
+        revisar_historico(historico)
+        return
     if args.email_teste:
         enviar_noticias(historico[:5], "teste")
         return
@@ -620,4 +705,6 @@ if __name__ == "__main__":
     p.add_argument("--sem-email", action="store_true", help="coleta sem enviar e-mail")
     p.add_argument("--resumo-semanal", action="store_true", help="envia o resumo dos últimos 7 dias")
     p.add_argument("--email-teste", action="store_true", help="envia e-mail de teste")
+    p.add_argument("--revisar-historico", action="store_true",
+                   help="reaplica os filtros e corrige datas das notícias já gravadas")
     executar(p.parse_args())

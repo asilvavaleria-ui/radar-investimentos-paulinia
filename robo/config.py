@@ -361,6 +361,10 @@ TERMOS_EXCLUSAO = [
     "novembro azul", "campanha", "circuito saude", "saude da mulher", "bom prato", "refeicoes",
     "moradias populares", "minha casa", "habitacional", "idosos", "violencia",
     "cursos gratuitos", "iluminacao publica", "bloqueio", "interdicao", "transito",
+    # ações sociais, educativas e institucionais de empresas (não são investimentos)
+    "alunos", "estudantes", "educacao ambiental", "propostas ambientais", "palestra", "oficina",
+    "voluntari", "doacao", "doa ", "conscientiza", "premio", "premia", "homenage", "reconhecimento",
+    "certificacao", "selo", "patrocin", "semana do meio ambiente", "dia mundial", "visita tecnica",
     # segurança, esportes e entretenimento
     "homicidio", "assassin", "preso", "presa ", "prisao", "acidente", "incendio", "explosao",
     "morre", "morte", "roubo", "furto", "trafico", "tiroteio", "policia", "golpe",
@@ -378,6 +382,7 @@ EMPRESAS_CONHECIDAS = [
     "Amazon", "Mercado Livre", "Magalu", "GLP", "Log CP", "Prologis", "Scala", "Ascenty",
     "Equinix", "Odata", "Elea", "Unilever", "Solenis", "Ingredion", "Clariant", "Dow",
     "DuPont", "Corteva", "3M", "Henkel", "Ashland", "Kimberly-Clark", "Suzano", "Klabin",
+    "AutoZone", "Boa Supermercados", "CPFL Energia",
 ]
 
 # ---------------------------------------------------------------------------

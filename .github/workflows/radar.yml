@@ -12,7 +12,7 @@ on:
         description: "O que executar"
         type: choice
         default: busca
-        options: [busca, email-teste, resumo-semanal]
+        options: [busca, email-teste, resumo-semanal, revisar-historico]
       dias:
         description: "Buscar notícias de quantos dias para trás (use 365 na primeira vez)"
         default: "15"
@@ -54,7 +54,9 @@ jobs:
           [ -z "$SMTP_HOST" ] && unset SMTP_HOST
           [ -z "$SMTP_PORTA" ] && unset SMTP_PORTA
           MODO="${{ github.event.inputs.modo }}"
-          if [ "$MODO" = "email-teste" ]; then
+          if [ "$MODO" = "revisar-historico" ]; then
+            python robo/radar.py --revisar-historico
+          elif [ "$MODO" = "email-teste" ]; then
             python robo/radar.py --email-teste
           elif [ "$MODO" = "resumo-semanal" ] || [ "${{ github.event.schedule }}" = "0 11 * * 1" ]; then
             python robo/radar.py --resumo-semanal
