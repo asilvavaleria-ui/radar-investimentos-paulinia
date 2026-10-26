@@ -46,6 +46,7 @@ ARQ_VISTOS = RAIZ / "data" / "vistos.json"
 
 FUSO_BR = timezone(timedelta(hours=-3))
 ESTATISTICAS = {"google_sem_link": 0}
+ULTIMO_ERRO = {}
 CABECALHOS = {
     "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"),
@@ -251,10 +252,12 @@ def data_da_pagina(sopa, url, html):
 
 def ler_artigo(url):
     """Baixa a página da notícia e devolve (texto, descrição meta, url final, data de publicação)."""
+    ULTIMO_ERRO["ler_artigo"] = None
     try:
         r = requests.get(url, headers=CABECALHOS, timeout=15)
         r.raise_for_status()
-    except Exception:
+    except Exception as erro:
+        ULTIMO_ERRO["ler_artigo"] = str(erro)[:150]
         return "", "", url, None
     if "news.google.com" in r.url or "consent.google" in r.url:
         return "", "", url, None  # página do próprio Google, não da notícia
@@ -623,13 +626,16 @@ def registrar_repetida(item, conhecidas):
 def revisar_historico(historico):
     """Reaplica filtros e confere a data real de publicação das notícias já gravadas."""
     corte = agora() - timedelta(days=365)
-    mantidas = []
+    mantidas, relatorio = [], []
     for n in historico:
         if not passa_triagem(n["titulo"], ""):
             print(f"  - filtro: {n['titulo'][:90]}")
             continue
         if "news.google.com" not in n["link"]:
             texto, _, _, data = ler_artigo(n["link"])
+            relatorio.append({"titulo": n["titulo"][:80], "pagina_lida": bool(texto),
+                              "data_rss": n["publicado"][:10], "data_pagina": f"{data:%Y-%m-%d}" if data else None,
+                              "erro": ULTIMO_ERRO.get("ler_artigo")})
             if data and data < datetime.fromisoformat(n["publicado"]) - timedelta(days=1):
                 print(f"  ~ data corrigida {n['publicado'][:10]} -> {data:%Y-%m-%d}: {n['titulo'][:70]}")
                 n["publicado"] = data.isoformat()
@@ -642,6 +648,7 @@ def revisar_historico(historico):
         mantidas.append(n)
     mantidas.sort(key=lambda n: n["publicado"], reverse=True)
     gravar_json(ARQ_NOTICIAS, mantidas)
+    gravar_json(RAIZ / "data" / "revisao.json", relatorio)
     print(f"Histórico revisado: {len(historico)} -> {len(mantidas)} notícias.")
 
 
