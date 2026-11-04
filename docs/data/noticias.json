@@ -14,7 +14,10 @@
   "valor_reais": 0.0,
   "empregos": 0,
   "pontuacao": 19,
-  "relevancia": "alta"
+  "relevancia": "alta",
+  "outras_fontes": [
+   "TV Jaguari"
+  ]
  },
  {
   "id": "4c970d402df378a7",
