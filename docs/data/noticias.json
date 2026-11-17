@@ -39,6 +39,28 @@
   "relevancia": "alta"
  },
  {
+  "id": "5b63fbfd3d551b6c",
+  "titulo": "Mesmo sem Vila de Natal, Paulínia prevê R$ 5,6 milhões em decoração",
+  "link": "https://www.tribunaliberal.com.br/politica/Mesmo-sem-Vila-de-Natal-Paulinia-preve-56-milhoes-em-decoracao",
+  "fonte": "tribunaliberal.com.br",
+  "publicado": "2026-11-15T16:00:00+00:00",
+  "coletado": "2026-11-17T20:03:04.059233+00:00",
+  "resumo": "Em 2025, uma licitação inicialmente estimada em\r\naproximadamente R$ 20 milhões acabou revogada após impugnações e\r\nquestionamentos apresentados ao Tribunal de Contas do Estado de São Paulo\r\n(TCE-SP). Embora o investimento previsto seja menor que o dos anos\r\nanteriores, o orçamento de R$ 5,65 milhões demonstra que a prefeitura pretende\r\nmanter uma decoração de grande porte, mesmo sem realizar o evento no modelo que\r\nvinha sendo adotado.",
+  "empresa": "",
+  "tipo": "Investimento anunciado",
+  "setor": "Infraestrutura Pública",
+  "valores": [
+   "R$ 5,6 milhões",
+   "R$ 5,65 milhões",
+   "R$ 5.653.382,67",
+   "R$ 8,1 milhões"
+  ],
+  "valor_reais": 20000000.0,
+  "empregos": 0,
+  "pontuacao": 16,
+  "relevancia": "alta"
+ },
+ {
   "id": "f6ca0bd345118b7d",
   "titulo": "A SUPERGASBRAS JÁ OPERA SEIS CAMINHÕES DE SUA FROTA COM DIESEL, BIOMETANO E GÁS",
   "link": "https://petronoticias.com.br/a-supergasbras-ja-opera-seis-caminhoes-de-sua-frota-com-diesel-biometano-e-gas/",
