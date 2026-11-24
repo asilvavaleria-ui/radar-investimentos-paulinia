@@ -1,8 +1,8 @@
 {
- "ultima_execucao": "2026-11-23T22:01:48.388981+00:00",
- "novas_na_ultima_execucao": 1,
+ "ultima_execucao": "2026-11-24T05:59:32.093777+00:00",
+ "novas_na_ultima_execucao": 0,
  "total_noticias": 50,
- "fontes_consultadas": 209,
- "fontes_com_falha": 18,
- "links_google_nao_decodificados": 3
+ "fontes_consultadas": 226,
+ "fontes_com_falha": 1,
+ "links_google_nao_decodificados": 5
 }
