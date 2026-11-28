@@ -1,5 +1,24 @@
 [
  {
+  "id": "1d87ae1401c289bb",
+  "titulo": "Orizon ganha aval da ANP para certificado verde de biometano do Grande Recife",
+  "link": "https://movimentoeconomico.com.br/geral/redacao/2026/11/27/orizon-ganha-aval-da-anp-para-certificado-verde-de-biometano-do-grande-recife/",
+  "fonte": "Movimento Econômico",
+  "publicado": "2026-11-27T22:16:52+00:00",
+  "coletado": "2026-11-28T03:52:26.535600+00:00",
+  "resumo": "A usina de biometano da Orizon no Ecoparque Jaboatão , que produz gás com o lixo de cinco cidades da Região Metropolitana do Recife , é a primeira do Nordeste na lista de produtores aprovados pela Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) para emitir certificados de origem renovável. O preço médio de compra do biometano considerado na Tarifa Verde é de R$ 3,5669 por metro cúbico, contra R$ 2,4453 do gás natural.",
+  "empresa": "Orizon",
+  "tipo": "Outros sinais",
+  "setor": "Energia e Petróleo",
+  "valores": [
+   "R$ 2,5 milhões"
+  ],
+  "valor_reais": 2500000.0,
+  "empregos": 0,
+  "pontuacao": 15,
+  "relevancia": "media"
+ },
+ {
   "id": "1bdbe029475ebe61",
   "titulo": "Preço do etanol sobe nas usinas de SP, e hidratado acumula alta de 5,26% em Paulínia",
   "link": "https://www.portaldoagronegocio.com.br/energias-renovaveis/etanol/noticias/preco-do-etanol-sobe-nas-usinas-de-sp-e-hidratado-acumula-alta-de-5-26-em-paulinia",
